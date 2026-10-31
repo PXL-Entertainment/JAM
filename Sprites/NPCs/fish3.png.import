@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1h24y4xhivs1"
-path="res://.godot/imported/Panel.png-ff2e49d027568e6ca28a5e704356aaeb.ctex"
+uid="uid://23bgyq3jw32d"
+path="res://.godot/imported/fish3.png-754742067acc8a3f393044eb395b7b6e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Panel.png"
-dest_files=["res://.godot/imported/Panel.png-ff2e49d027568e6ca28a5e704356aaeb.ctex"]
+source_file="res://Sprites/NPCs/fish3.png"
+dest_files=["res://.godot/imported/fish3.png-754742067acc8a3f393044eb395b7b6e.ctex"]
 
 [params]
 
