@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://colkvh7or1ok0"]
 
-[ext_resource type="Script" uid="uid://dh2uajl104ne8" path="res://player.gd" id="1_onrkg"]
-[ext_resource type="Texture2D" uid="uid://cwppdhrdw4rke" path="res://Sprites/Character_Idle_Sheet.png" id="2_hqtel"]
-[ext_resource type="Texture2D" uid="uid://bewcnajaffa1w" path="res://Sprites/Character_Running_Sheet.png" id="2_onrkg"]
+[ext_resource type="Script" uid="uid://dh2uajl104ne8" path="res://player1.gd" id="1_onrkg"]
+[ext_resource type="Texture2D" uid="uid://cwppdhrdw4rke" path="res://Sprites/Characters/Character_Idle_Sheet.png" id="2_hqtel"]
+[ext_resource type="Texture2D" uid="uid://yjalrpt165n6" path="res://Sprites/Characters/Character_Running_Sheet.png" id="2_onrkg"]
 [ext_resource type="Script" uid="uid://bchyh6gipysul" path="res://ilke.gd" id="3_i3pqv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sweqy"]
@@ -52,29 +52,30 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t6fs7"]
-size = Vector2(56, 84)
+size = Vector2(48, 80)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_t6fs7"]
-radius = 182.09888
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6w1u4"]
+size = Vector2(96, 256)
 
-[node name="Player" type="CharacterBody2D" unique_id=388676567]
-scale = Vector2(4, 4)
+[node name="Player1" type="CharacterBody2D" unique_id=388676567]
+collision_layer = 4
 script = ExtResource("1_onrkg")
 
 [node name="İlke" type="AnimatedSprite2D" parent="." unique_id=1999178516]
 unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_t6fs7")
-animation = &"idle"
+animation = &"running"
 script = ExtResource("3_i3pqv")
 
 [node name="Hitbox" type="CollisionShape2D" parent="." unique_id=1387081756]
-position = Vector2(4, 2)
+position = Vector2(0, 4)
 shape = SubResource("RectangleShape2D_t6fs7")
 
-[node name="HoldMarker" type="Marker2D" parent="." unique_id=1243332035]
-position = Vector2(0, -56)
+[node name="HoldPoint" type="Marker2D" parent="." unique_id=1243332035]
+position = Vector2(0, -64)
 
-[node name="InteractionArea" type="Area2D" parent="." unique_id=755072425]
+[node name="PickupArea" type="Area2D" parent="." unique_id=755072425]
+collision_mask = 12
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=1479690356]
-shape = SubResource("CircleShape2D_t6fs7")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickupArea" unique_id=1479690356]
+shape = SubResource("RectangleShape2D_6w1u4")
