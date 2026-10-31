@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b53bhuff7ckhb"
-path="res://.godot/imported/Character_Running_Sheet.png-3d79c1ce0a054ed51b6c49ad50c738a9.ctex"
+uid="uid://23bgyq3jw32d"
+path="res://.godot/imported/fish3.png-754742067acc8a3f393044eb395b7b6e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Character_Running_Sheet.png"
-dest_files=["res://.godot/imported/Character_Running_Sheet.png-3d79c1ce0a054ed51b6c49ad50c738a9.ctex"]
+source_file="res://Sprites/NPCs/fish3.png"
+dest_files=["res://.godot/imported/fish3.png-754742067acc8a3f393044eb395b7b6e.ctex"]
 
 [params]
 
