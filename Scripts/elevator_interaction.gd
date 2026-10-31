@@ -1,28 +1,15 @@
 extends Area2D
-## node_2d.tscn içindeki Area2D (ElevatorArea / elevator 2d) node'una eklenir.
-##
-## BU VERSİYON AUTOLOAD GEREKTİRMEZ. Project Settings > Autoload ile hiç
-## uğraşmana gerek yok — geçiş sistemini (SceneTransition) ilk ihtiyaç
-## duyulduğunda kendisi otomatik olarak sahne köküne (root) ekliyor.
-##
-## Gereksinimler (sadece bunlar):
-## 1) Player node'u "player" grubuna eklenmiş olmalı (Node sekmesi > Groups).
-## 2) Input Map'te "interact" adında, E tuşuna bağlı bir aksiyon tanımlı olmalı.
-## 3) res://Scripts/scene_transition.gd dosyası mevcut olmalı (script içeriği
-##    aynı kalıyor, sadece Autoload'a eklenmesine gerek yok).
-## 4) Bu Area2D'ye bir CollisionShape2D (RectangleShape2D) child olarak
-##    eklenmeli; boyutu Inspector'dan ayarlanabilir.
-## 5) Area2D'nin Collision Mask'ı, oyuncunun bulunduğu fizik katmanını kapsamalı.
 
-const SCENE_TRANSITION_SCRIPT := preload("res://Scripts/scene_transition.gd")
-const TRANSITION_NODE_NAME := "__SceneTransition"
+const SceneFader := preload("res://Scripts/scene_fader.gd")
 
-@export var target_scene_path: String = "res://Level/elevator.tscn"
+@export_file("*.tscn") var target_scene_path: String = "res://Level/elevator.tscn"
 @export var indicator_offset: Vector2 = Vector2(0, -48)
+@export var fade_duration: float = 0.5
 
 var _player_in_area: bool = false
 var _current_player: Node2D = null
 var _e_indicator: Label
+var _is_transitioning: bool = false
 
 func _ready() -> void:
 	body_entered.connect(_on_body_entered)
@@ -60,24 +47,15 @@ func _on_body_exited(body: Node) -> void:
 	_e_indicator.visible = false
 
 func _try_trigger_elevator() -> void:
-	var transition := _get_transition()
-	if transition.is_transitioning:
+	if _is_transitioning:
 		return
+	_is_transitioning = true
 	_player_in_area = false
 	_e_indicator.visible = false
-	transition.change_scene(target_scene_path)
 
-## Geçiş sistemini sahne köküne (SceneTree root) bir kere ekler, sonraki
-## çağrılarda zaten var olanı bulup döndürür. Autoload'a hiç ihtiyaç yok.
-func _get_transition() -> Node:
-	var root := get_tree().root
-	var existing := root.get_node_or_null(TRANSITION_NODE_NAME)
-	if existing:
-		return existing
-	var instance: Node = SCENE_TRANSITION_SCRIPT.new()
-	instance.name = TRANSITION_NODE_NAME
-	root.add_child(instance)
-	return instance
+	var fader := SceneFader.new()
+	get_tree().root.add_child(fader)
+	fader.go_to(target_scene_path, fade_duration)
 
 func _build_indicator() -> Label:
 	var label := Label.new()
