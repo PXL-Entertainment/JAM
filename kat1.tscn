@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://chxbn2am7fl6s" path="res://Sprites/Trashes/Trash_1.png" id="9_qhpvn"]
 [ext_resource type="Texture2D" uid="uid://dogpqx46tbtvp" path="res://Sprites/Trashes/Trash_2.png" id="10_lr72d"]
 [ext_resource type="Texture2D" uid="uid://blvh0g5dgckr8" path="res://Sprites/Trashes/Trash_3.png" id="11_bc6mo"]
+[ext_resource type="Script" uid="uid://dk5t4131fkjfs" path="res://Level/elevator.gd" id="11_msnr3"]
 [ext_resource type="Texture2D" uid="uid://cnolo2bd7b8a5" path="res://Sprites/Trashes/Trash_4.png" id="12_rhf8i"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2qei5"]
@@ -22,6 +23,9 @@ size = Vector2(64, 64)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_brl05"]
 size = Vector2(41, 41)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bc6mo"]
+size = Vector2(95, 217.5)
 
 [node name="Game" type="Node2D" unique_id=262189049]
 
@@ -92,3 +96,10 @@ shape = SubResource("RectangleShape2D_brl05")
 
 [node name="Player" parent="." unique_id=388676567 instance=ExtResource("7_qcaw7")]
 position = Vector2(152, 928)
+
+[node name="Elevator" type="Area2D" parent="." unique_id=665480470]
+script = ExtResource("11_msnr3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Elevator" unique_id=1051084623]
+position = Vector2(150, 867)
+shape = SubResource("RectangleShape2D_bc6mo")

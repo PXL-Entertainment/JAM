@@ -57,8 +57,7 @@ size = Vector2(48, 80)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6w1u4"]
 size = Vector2(96, 256)
 
-[node name="Player1" type="CharacterBody2D" unique_id=388676567]
-collision_layer = 4
+[node name="Player1" type="CharacterBody2D" unique_id=388676567 groups=["player"]]
 script = ExtResource("1_onrkg")
 
 [node name="İlke" type="AnimatedSprite2D" parent="." unique_id=1999178516]
