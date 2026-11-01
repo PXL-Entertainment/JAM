@@ -6,7 +6,7 @@ extends CharacterBody2D
 var held_item: Node2D = null
 
 var SPEED = 500
-#const JUMP_POWER = -1000
+var JUMP_POWER = -300
 
 func _ready() -> void:
 	# Onceki sahneden elimde bir esya tasiniyorsa, onu burada tekrar ele al.
