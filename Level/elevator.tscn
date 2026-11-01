@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://c1h24y4xhivs1" path="res://Sprites/Background/Elevator/Panel.png" id="1_1jhyo"]
 [ext_resource type="Texture2D" uid="uid://428dvf0uht1w" path="res://Sprites/Buttons/Button_1.png" id="1_lxaep"]
 [ext_resource type="Script" uid="uid://j7eqvpv6xatd" path="res://Level/button.gd" id="2_hmyla"]
+[ext_resource type="Script" uid="uid://1b8dqkqn0go8" path="res://Level/control.gd" id="2_r0h78"]
 [ext_resource type="Texture2D" uid="uid://kgj5yw5dx8v" path="res://Sprites/Buttons/Button_2.png" id="3_ngv1u"]
 [ext_resource type="Script" uid="uid://dmoei7diewdsx" path="res://Level/button_2.gd" id="4_7mu4q"]
 [ext_resource type="Texture2D" uid="uid://tsaaya3x11dy" path="res://Sprites/Buttons/Button_3.png" id="4_f8hqu"]
@@ -29,6 +30,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("2_r0h78")
 
 [node name="Button" type="Button" parent="CanvasLayer/Control" unique_id=1822633193]
 layout_mode = 0

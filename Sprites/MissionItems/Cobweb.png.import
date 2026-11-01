@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bysnef5x0vx2f"
-path="res://.godot/imported/Wall_Shelf.png-c72b50a9e70fca500fbccf482d650c57.ctex"
+uid="uid://bsx5inxait2ah"
+path="res://.godot/imported/Cobweb.png-cc89b085b27cabc827aed44253b4a6d2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Wall_Shelf.png"
-dest_files=["res://.godot/imported/Wall_Shelf.png-c72b50a9e70fca500fbccf482d650c57.ctex"]
+source_file="res://Sprites/MissionItems/Cobweb.png"
+dest_files=["res://.godot/imported/Cobweb.png-cc89b085b27cabc827aed44253b4a6d2.ctex"]
 
 [params]
 

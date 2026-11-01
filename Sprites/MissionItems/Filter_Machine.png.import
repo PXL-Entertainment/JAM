@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bsx5inxait2ah"
-path="res://.godot/imported/Cobweb.png-23965567bce541e8f5ee567b59fcc4e3.ctex"
+uid="uid://f56ugkgs8u4w"
+path="res://.godot/imported/Filter_Machine.png-440e1cb020eb5c7e4008f592c1ce423a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Cobweb.png"
-dest_files=["res://.godot/imported/Cobweb.png-23965567bce541e8f5ee567b59fcc4e3.ctex"]
+source_file="res://Sprites/MissionItems/Filter_Machine.png"
+dest_files=["res://.godot/imported/Filter_Machine.png-440e1cb020eb5c7e4008f592c1ce423a.ctex"]
 
 [params]
 

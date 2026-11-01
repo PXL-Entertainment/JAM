@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://jetdxe8vfttl"
-path="res://.godot/imported/Micro_Filter.png-8a846e282c8f9a17d7a0c63c73930728.ctex"
+uid="uid://bysnef5x0vx2f"
+path="res://.godot/imported/Wall_Shelf.png-f06a79ed6a96d175c6ebddda00f5d018.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Micro_Filter.png"
-dest_files=["res://.godot/imported/Micro_Filter.png-8a846e282c8f9a17d7a0c63c73930728.ctex"]
+source_file="res://Sprites/Other/Wall_Shelf.png"
+dest_files=["res://.godot/imported/Wall_Shelf.png-f06a79ed6a96d175c6ebddda00f5d018.ctex"]
 
 [params]
 

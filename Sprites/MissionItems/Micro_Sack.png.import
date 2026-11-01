@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwxxsttunhr8t"
-path="res://.godot/imported/Recycle_Machine_Full.png-1dd309d262f3970034e7cc8c756377b6.ctex"
+uid="uid://cenkfxtoctkb2"
+path="res://.godot/imported/Micro_Sack.png-95eaa16b07fd478636d2e889e5c09358.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Recycle_Machine_Full.png"
-dest_files=["res://.godot/imported/Recycle_Machine_Full.png-1dd309d262f3970034e7cc8c756377b6.ctex"]
+source_file="res://Sprites/MissionItems/Micro_Sack.png"
+dest_files=["res://.godot/imported/Micro_Sack.png-95eaa16b07fd478636d2e889e5c09358.ctex"]
 
 [params]
 

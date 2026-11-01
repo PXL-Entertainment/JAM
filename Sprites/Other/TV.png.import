@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://lvhyxi1nqwld"
-path="res://.godot/imported/net3.png-e90024b0097eda9838a029e5056f51e8.ctex"
+uid="uid://btkysh1fd0rhh"
+path="res://.godot/imported/TV.png-5d9e2b54ea6552e5d767842cf8d66126.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Background/Floor3/net3.png"
-dest_files=["res://.godot/imported/net3.png-e90024b0097eda9838a029e5056f51e8.ctex"]
+source_file="res://Sprites/Other/TV.png"
+dest_files=["res://.godot/imported/TV.png-5d9e2b54ea6552e5d767842cf8d66126.ctex"]
 
 [params]
 

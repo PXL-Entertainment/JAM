@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d157ks64wvw1m"
-path="res://.godot/imported/Couch.png-05dde6ed2a20aac8d1c370fe3eed70a9.ctex"
+uid="uid://c1tubdtg3y2j3"
+path="res://.godot/imported/Refrigerator.png-ece595dd78409480d8d1772612818325.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Couch.png"
-dest_files=["res://.godot/imported/Couch.png-05dde6ed2a20aac8d1c370fe3eed70a9.ctex"]
+source_file="res://Sprites/Other/Refrigerator.png"
+dest_files=["res://.godot/imported/Refrigerator.png-ece595dd78409480d8d1772612818325.ctex"]
 
 [params]
 

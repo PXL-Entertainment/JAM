@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://btrfte1ou5qv3"
-path="res://.godot/imported/Coffee_Table.png-503d43f28ad6eb01ec39d8f163243bd1.ctex"
+uid="uid://cb1tgjjkguvan"
+path="res://.godot/imported/Micro_Machine.png-481fd75659fe213e10b18d58214b6b0e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Coffee_Table.png"
-dest_files=["res://.godot/imported/Coffee_Table.png-503d43f28ad6eb01ec39d8f163243bd1.ctex"]
+source_file="res://Sprites/MissionItems/Micro_Machine.png"
+dest_files=["res://.godot/imported/Micro_Machine.png-481fd75659fe213e10b18d58214b6b0e.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://22igsc7mgh56"
-path="res://.godot/imported/big_filter.png-80f81805f9f214e78761c274d9f7c696.ctex"
+path="res://.godot/imported/big_filter.png-92d6a8995d36838c52e9e951ca04e985.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/big_filter.png"
-dest_files=["res://.godot/imported/big_filter.png-80f81805f9f214e78761c274d9f7c696.ctex"]
+source_file="res://Sprites/MissionItems/big_filter.png"
+dest_files=["res://.godot/imported/big_filter.png-92d6a8995d36838c52e9e951ca04e985.ctex"]
 
 [params]
 

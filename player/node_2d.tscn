@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dorf21k48sxgc" path="res://Sprites/Background/Entrance/Background_0.png" id="1_nevrd"]
 [ext_resource type="Script" uid="uid://ckjwa6bcsix8w" path="res://Scripts/elevator_interaction.gd" id="3_nevrd"]
 [ext_resource type="PackedScene" uid="uid://colkvh7or1ok0" path="res://player1.tscn" id="3_xmg5n"]
+[ext_resource type="Texture2D" uid="uid://fa6obd7txdqk" path="res://Sprites/Background/Entrance/Seaweeds.png" id="4_xmg5n"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_7g42v"]
 distance = -0.666687
@@ -34,3 +35,7 @@ shape = SubResource("RectangleShape2D_8r3jq")
 [node name="Player1" parent="." unique_id=388676567 instance=ExtResource("3_xmg5n")]
 position = Vector2(338.00003, 878)
 scale = Vector2(1.5, 1.5)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=592005018]
+position = Vector2(960, 536)
+texture = ExtResource("4_xmg5n")
