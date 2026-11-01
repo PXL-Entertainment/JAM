@@ -91,6 +91,7 @@ collision_layer = 4
 position = Vector2(1152, 968)
 item_name = "MicroFilter"
 texture = ExtResource("6_yj4m8")
+interact_icon_texture = ExtResource("3_7nx8g")
 
 [node name="Clock" type="Sprite2D" parent="." unique_id=1342479722]
 position = Vector2(493, 456)
