@@ -28,13 +28,16 @@ func _process(_delta: float) -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	if not _player_in_area:
 		return
-	if event.is_action_pressed("interact"):
+	if event.is_action_pressed("interaction"):
 		_try_trigger_elevator()
 		get_viewport().set_input_as_handled()
 
 func _on_body_entered(body: Node) -> void:
+	
+	
 	if not body.is_in_group("player"):
 		return
+	
 	_player_in_area = true
 	_current_player = body
 	_e_indicator.visible = true

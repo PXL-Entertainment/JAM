@@ -2,7 +2,7 @@ extends Button
 
 const SceneFader := preload("res://Scripts/scene_fader.gd")
 
-@export_file("*.tscn") var target_scene: String = "res://Level/kat_3.tscn"
+@export_file("*.tscn") var target_scene: String = "res://kat_3.tscn"
 @export var fade_duration: float = 0.5
 
 func _ready() -> void:

@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://cr2idlqj4lpyf"]
+
+[ext_resource type="Texture2D" uid="uid://cuc5o2x0uemox" path="res://Sprites/Recycle_Machine.png" id="1_pr4pa"]
+[ext_resource type="Script" uid="uid://ce4tahae6dvai" path="res://recyle_machine.gd" id="1_sapch"]
+[ext_resource type="Script" uid="uid://5h7x33bhex8t" path="res://recyle_machine_sprite.gd" id="3_4ma8v"]
+[ext_resource type="Texture2D" uid="uid://cb1tgjjkguvan" path="res://Sprites/Micro_Machine.png" id="3_e3t03"]
+[ext_resource type="PackedScene" uid="uid://m7l1bejddxo8" path="res://filtre.tscn" id="4_x1eav"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t6fs7"]
+size = Vector2(208, 248)
+
+[sub_resource type="Animation" id="Animation_sapch"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RecyleMachineSprite:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_4ma8v"]
+resource_name = "pickup"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RecyleMachineSprite:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.1, 1.1), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_e3t03"]
+_data = {
+&"RESET": SubResource("Animation_sapch"),
+&"pickup": SubResource("Animation_4ma8v")
+}
+
+[node name="RecyleMachine" type="Area2D" unique_id=2007846724]
+collision_layer = 8
+script = ExtResource("1_sapch")
+texture_idle = ExtResource("1_pr4pa")
+texture_active = ExtResource("3_e3t03")
+reward_item_scene = ExtResource("4_x1eav")
+
+[node name="RecyleMachineSprite" type="Sprite2D" parent="." unique_id=544549503]
+unique_name_in_owner = true
+texture = ExtResource("1_pr4pa")
+script = ExtResource("3_4ma8v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1174811647]
+position = Vector2(0, 68)
+shape = SubResource("RectangleShape2D_t6fs7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=235171994]
+unique_name_in_owner = true
+libraries/ = SubResource("AnimationLibrary_e3t03")

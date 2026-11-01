@@ -1,9 +1,0 @@
-[gd_scene format=3 uid="uid://c1dqtt27rf2h"]
-
-[ext_resource type="Texture2D" uid="uid://tsaaya3x11dy" path="res://Sprites/Buttons/Button_3.png" id="1_3rcih"]
-
-[node name="Kat_1" type="Node2D" unique_id=1389559806]
-
-[node name="Button3" type="Sprite2D" parent="." unique_id=1303995450]
-position = Vector2(493, 143)
-texture = ExtResource("1_3rcih")

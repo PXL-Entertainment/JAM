@@ -1,17 +1,15 @@
 [gd_scene format=3 uid="uid://dvrb2ro67pwyp"]
 
-[ext_resource type="Script" uid="uid://pu5auwg8sgn2" path="res://area_2d.gd" id="1_tnite"]
-[ext_resource type="Texture2D" uid="uid://d1e5i0yhdnlsp" path="res://Sprites/Buttons/Button_5.png" id="2_ttk8k"]
+[ext_resource type="Script" uid="uid://qof1vwclrvh6" path="res://item.gd" id="1_tnite"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_t6fs7"]
-radius = 72.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t6fs7"]
 
-[node name="Item" type="Area2D" unique_id=900323995]
-z_index = 1
+[node name="Item" type="RigidBody2D" unique_id=1094159161]
+collision_layer = 4
 script = ExtResource("1_tnite")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=97848238]
-texture = ExtResource("2_ttk8k")
+[node name="ItemSprite" type="Sprite2D" parent="." unique_id=1620493574]
+unique_name_in_owner = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=517272641]
-shape = SubResource("CircleShape2D_t6fs7")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=80498181]
+shape = SubResource("RectangleShape2D_t6fs7")

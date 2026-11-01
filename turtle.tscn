@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://cclmff4li0r5x"]
+
+[ext_resource type="Texture2D" uid="uid://dfoaw8guh32ji" path="res://Sprites/Turtle.png" id="1_2ssyi"]
+[ext_resource type="Script" uid="uid://c8o4n5mt0xg47" path="res://turtle.gd" id="1_w1etq"]
+[ext_resource type="Script" uid="uid://qof1vwclrvh6" path="res://item.gd" id="3_ghgcf"]
+[ext_resource type="Texture2D" uid="uid://78jrcox4ev41" path="res://Sprites/Clorine_Bottle.png" id="4_hlk0a"]
+[ext_resource type="Texture2D" uid="uid://d2vkjww6g1300" path="res://Sprites/Background/Floor3/net1.png" id="5_vv5kj"]
+[ext_resource type="Texture2D" uid="uid://bgkv1hxccnhi0" path="res://Sprites/Background/Floor3/net2.png" id="6_f1u4q"]
+[ext_resource type="Texture2D" uid="uid://lvhyxi1nqwld" path="res://Sprites/Background/Floor3/net3.png" id="7_2g1hy"]
+[ext_resource type="Texture2D" uid="uid://b8n5s8uohygxq" path="res://Sprites/Background/Floor3/net4.png" id="8_cgedt"]
+[ext_resource type="Texture2D" uid="uid://dnd6yfi3a4534" path="res://Sprites/Background/Floor3/net5.png" id="9_mwhbe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2qei5"]
+size = Vector2(432, 416)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t6fs7"]
+
+[node name="Turtle" type="Area2D" unique_id=66645801]
+collision_layer = 8
+script = ExtResource("1_w1etq")
+texture_with_bottle = ExtResource("1_2ssyi")
+texture_without_bottle = ExtResource("1_2ssyi")
+
+[node name="TurtleSprite" type="Sprite2D" parent="." unique_id=931546951]
+unique_name_in_owner = true
+texture = ExtResource("1_2ssyi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=838481830]
+shape = SubResource("RectangleShape2D_2qei5")
+
+[node name="MouthPoint" type="Marker2D" parent="." unique_id=1935166803]
+unique_name_in_owner = true
+position = Vector2(-72, -24)
+
+[node name="Item" type="RigidBody2D" parent="MouthPoint" unique_id=1094159161]
+unique_name_in_owner = true
+collision_layer = 4
+script = ExtResource("3_ghgcf")
+item_name = "ClorineBottle"
+texture = ExtResource("4_hlk0a")
+
+[node name="ItemSprite" type="Sprite2D" parent="MouthPoint/Item" unique_id=1620493574]
+unique_name_in_owner = true
+rotation = -1.5707964
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MouthPoint/Item" unique_id=80498181]
+scale = Vector2(1.8, 1.8)
+shape = SubResource("RectangleShape2D_t6fs7")
+
+[node name="Webs" type="Node2D" parent="." unique_id=1671422761]
+
+[node name="Web1" type="Sprite2D" parent="Webs" unique_id=1489848767]
+texture = ExtResource("5_vv5kj")
+
+[node name="Web2" type="Sprite2D" parent="Webs" unique_id=1586733344]
+position = Vector2(80, -48)
+texture = ExtResource("6_f1u4q")
+
+[node name="Web3" type="Sprite2D" parent="Webs" unique_id=1270264061]
+position = Vector2(16, -80)
+texture = ExtResource("7_2g1hy")
+
+[node name="Web4" type="Sprite2D" parent="Webs" unique_id=672908074]
+position = Vector2(-8, 56)
+texture = ExtResource("8_cgedt")
+
+[node name="Web5" type="Sprite2D" parent="Webs" unique_id=1198732284]
+position = Vector2(-56, 0)
+texture = ExtResource("9_mwhbe")
