@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://1hjc3yybnthx"]
 
 [ext_resource type="Texture2D" uid="uid://dorf21k48sxgc" path="res://Sprites/Background/Entrance/Background_0.png" id="1_nevrd"]
+[ext_resource type="Texture2D" uid="uid://b87q212ejhmn5" path="res://Sprites/E_Keycap.png" id="3_hnl72"]
 [ext_resource type="Script" uid="uid://ckjwa6bcsix8w" path="res://Scripts/elevator_interaction.gd" id="3_nevrd"]
 [ext_resource type="PackedScene" uid="uid://colkvh7or1ok0" path="res://player1.tscn" id="3_xmg5n"]
 
@@ -26,6 +27,9 @@ shape = SubResource("WorldBoundaryShape2D_7g42v")
 
 [node name="elevator 2d" type="Area2D" parent="." unique_id=1479630000]
 script = ExtResource("3_nevrd")
+indicator_offset = Vector2(11, -150)
+e_icon_texture = ExtResource("3_hnl72")
+icon_size = Vector2(75, 75)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="elevator 2d" unique_id=1830756690]
 position = Vector2(960, 861)

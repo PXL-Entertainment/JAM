@@ -15,6 +15,7 @@
 [ext_resource type="Script" uid="uid://42kiicfi7fii" path="res://item_4.gd" id="8_lr72d"]
 [ext_resource type="Texture2D" uid="uid://cnolo2bd7b8a5" path="res://Sprites/Trashes/Trash_4.png" id="9_vcqp4"]
 [ext_resource type="Script" uid="uid://dk5t4131fkjfs" path="res://Level/elevator.gd" id="11_msnr3"]
+[ext_resource type="Texture2D" uid="uid://b87q212ejhmn5" path="res://Sprites/E_Keycap.png" id="16_cl4cb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2qei5"]
 size = Vector2(1728, 20)
@@ -162,6 +163,7 @@ collision_layer = 12
 [node name="Elevator" type="Area2D" parent="." unique_id=665480470]
 collision_mask = 12
 script = ExtResource("11_msnr3")
+e_icon_texture = ExtResource("16_cl4cb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Elevator" unique_id=1051084623]
 position = Vector2(150, 867)

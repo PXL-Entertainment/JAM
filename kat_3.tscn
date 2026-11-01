@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://lvhyxi1nqwld" path="res://Sprites/Background/Floor3/net3.png" id="9_ya3bk"]
 [ext_resource type="Texture2D" uid="uid://b8n5s8uohygxq" path="res://Sprites/Background/Floor3/net4.png" id="10_703m3"]
 [ext_resource type="Texture2D" uid="uid://dnd6yfi3a4534" path="res://Sprites/Background/Floor3/net5.png" id="11_lkghk"]
+[ext_resource type="Texture2D" uid="uid://b87q212ejhmn5" path="res://Sprites/E_Keycap.png" id="14_2a23t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pvcbx"]
 size = Vector2(1728, 20)
@@ -119,6 +120,7 @@ position = Vector2(200, 896)
 [node name="Elevator" type="Area2D" parent="." unique_id=181471982]
 position = Vector2(-960, -540)
 script = ExtResource("5_fcwr2")
+e_icon_texture = ExtResource("14_2a23t")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Elevator" unique_id=2070319429]
 position = Vector2(1112, 1405)
