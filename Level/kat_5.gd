@@ -3,6 +3,7 @@ extends Node2D
 @onready var ocean: Sprite2D = $Ocean
 @onready var trash_nodes = [$Trash4]
 @onready var hidden_fish = [$Fish3]  # Fish3'ün altındaki çocuklar da gizlenir
+@onready var keycap: Node = $CanvasLayer/EKeycap
 
 const ELEVATOR_SCENE := "res://Level/elevator.tscn" # kendi yolunu yaz
 
@@ -39,6 +40,7 @@ func check_credits() -> void:
 
 	if check1 and check2 and check3:
 		credits_started = true
+		keycap.visible = false
 		await get_tree().create_timer(5.0).timeout
 		%AnimationPlayer.play("Credits")
 

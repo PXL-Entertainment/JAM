@@ -4,9 +4,7 @@
 [ext_resource type="Script" uid="uid://emaylop67111" path="res://recyle_machine.gd" id="2_qcaw7"]
 [ext_resource type="Texture2D" uid="uid://cuc5o2x0uemox" path="res://Sprites/MissionItems/Recycle_Machine.png" id="3_cl4cb"]
 [ext_resource type="Texture2D" uid="uid://chxbn2am7fl6s" path="res://Sprites/Trashes/Trash_1.png" id="4_msnr3"]
-[ext_resource type="Texture2D" uid="uid://dwxxsttunhr8t" path="res://Sprites/MissionItems/Recycle_Machine_Full.png" id="4_qhpvn"]
 [ext_resource type="Texture2D" uid="uid://dogpqx46tbtvp" path="res://Sprites/Trashes/Trash_2.png" id="5_bc6mo"]
-[ext_resource type="PackedScene" uid="uid://m7l1bejddxo8" path="res://filtre.tscn" id="5_tk1ef"]
 [ext_resource type="Script" uid="uid://5h7x33bhex8t" path="res://recyle_machine_sprite.gd" id="6_hpi27"]
 [ext_resource type="Script" uid="uid://qof1vwclrvh6" path="res://item.gd" id="6_vr36e"]
 [ext_resource type="PackedScene" uid="uid://colkvh7or1ok0" path="res://player1.tscn" id="7_qcaw7"]
@@ -105,9 +103,6 @@ shape = SubResource("RectangleShape2D_rfvcf")
 position = Vector2(1448, 784)
 collision_layer = 8
 script = ExtResource("2_qcaw7")
-texture_idle = ExtResource("3_cl4cb")
-texture_active = ExtResource("4_qhpvn")
-reward_item_scene = ExtResource("5_tk1ef")
 
 [node name="RecyleMachineSprite" type="Sprite2D" parent="RecyleMachine" unique_id=544549503]
 unique_name_in_owner = true
