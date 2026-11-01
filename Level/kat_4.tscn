@@ -4,9 +4,15 @@
 [ext_resource type="Script" uid="uid://dk5t4131fkjfs" path="res://Level/elevator.gd" id="2_f2x2t"]
 [ext_resource type="PackedScene" uid="uid://colkvh7or1ok0" path="res://player1.tscn" id="3_1j4ha"]
 [ext_resource type="Texture2D" uid="uid://b87q212ejhmn5" path="res://Sprites/E_Keycap.png" id="3_7nx8g"]
-[ext_resource type="Texture2D" uid="uid://d2jed0qr05rxl" path="res://Sprites/Aquarium.png" id="3_pd6yx"]
+[ext_resource type="Texture2D" uid="uid://d2jed0qr05rxl" path="res://Sprites/Other/Aquarium.png" id="3_pd6yx"]
 [ext_resource type="PackedScene" uid="uid://dvrb2ro67pwyp" path="res://item.tscn" id="5_7nx8g"]
-[ext_resource type="Texture2D" uid="uid://jetdxe8vfttl" path="res://Sprites/Micro_Filter.png" id="6_yj4m8"]
+[ext_resource type="Texture2D" uid="uid://csrysegpg80ml" path="res://Sprites/NPCs/fish1.png" id="5_nyw31"]
+[ext_resource type="Texture2D" uid="uid://dv252g4frm3oj" path="res://Sprites/NPCs/fish4.png" id="6_xl7rp"]
+[ext_resource type="Texture2D" uid="uid://jetdxe8vfttl" path="res://Sprites/MissionItems/Micro_Filter.png" id="6_yj4m8"]
+[ext_resource type="Texture2D" uid="uid://cydak2hbk0fwv" path="res://Sprites/NPCs/fish2.png" id="10_ohfem"]
+[ext_resource type="Texture2D" uid="uid://bouke03bh8m23" path="res://Sprites/Other/Clock.png" id="11_cgc75"]
+[ext_resource type="Texture2D" uid="uid://d157ks64wvw1m" path="res://Sprites/Other/Couch.png" id="12_d7xde"]
+[ext_resource type="Texture2D" uid="uid://bysnef5x0vx2f" path="res://Sprites/Other/Wall_Shelf.png" id="13_0kkcw"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_t6fs7"]
 
@@ -54,6 +60,29 @@ position = Vector2(320, 316)
 scale = Vector2(0.32, 0.32)
 texture = ExtResource("3_pd6yx")
 
+[node name="Fish2" type="Sprite2D" parent="Room1/Sprite2D" unique_id=514883651]
+position = Vector2(160.9375, 81.25)
+rotation = 0.086804815
+scale = Vector2(2.4414063, 2.34375)
+texture = ExtResource("10_ohfem")
+
+[node name="Fish1" type="Sprite2D" parent="Room1" unique_id=1154214339]
+position = Vector2(261, 362)
+scale = Vector2(0.7708333, 0.8645833)
+texture = ExtResource("5_nyw31")
+flip_h = true
+
+[node name="Fish4" type="Sprite2D" parent="Room1" unique_id=1482324487]
+position = Vector2(310, 281)
+rotation = -0.38268998
+scale = Vector2(0.9166667, 0.8541667)
+texture = ExtResource("6_xl7rp")
+
+[node name="Couch" type="Sprite2D" parent="." unique_id=1167357132]
+position = Vector2(1611, 824)
+scale = Vector2(2, 2)
+texture = ExtResource("12_d7xde")
+
 [node name="Player1" parent="." unique_id=388676567 instance=ExtResource("3_1j4ha")]
 position = Vector2(147, 934)
 collision_layer = 4
@@ -62,3 +91,15 @@ collision_layer = 4
 position = Vector2(1152, 968)
 item_name = "MicroFilter"
 texture = ExtResource("6_yj4m8")
+
+[node name="Clock" type="Sprite2D" parent="." unique_id=1342479722]
+position = Vector2(493, 456)
+texture = ExtResource("11_cgc75")
+
+[node name="WallShelf" type="Sprite2D" parent="." unique_id=1321190492]
+position = Vector2(1012, 578)
+texture = ExtResource("13_0kkcw")
+
+[node name="WallShelf2" type="Sprite2D" parent="." unique_id=1492773871]
+position = Vector2(1291, 432)
+texture = ExtResource("13_0kkcw")

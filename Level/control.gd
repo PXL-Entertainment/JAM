@@ -14,7 +14,7 @@ func _ready() -> void:
 
 func _setup_button(b: BaseButton) -> void:
 	base_scales[b] = b.scale
-	b.pivot_offset = b.size / 2  # butonun merkezinden ölçeklensin
+	b.pivot_offset = b.size / 4  # butonun merkezinden ölçeklensin
 	b.mouse_entered.connect(_animate.bind(b, HOVER_MULT))
 	b.mouse_exited.connect(_animate.bind(b, 1.0))
 	b.button_down.connect(_animate.bind(b, PRESS_MULT))
