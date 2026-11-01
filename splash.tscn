@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://dh5p8grpbewb"]
+
+[ext_resource type="Script" uid="uid://dbxlsokthm36g" path="res://splash.gd" id="1_13jq6"]
+[ext_resource type="Texture2D" uid="uid://c1yfmkfch8cgx" path="res://Sprites/Icons/Game Icon.png" id="1_b04ml"]
+[ext_resource type="FontFile" uid="uid://dd8u52rjrt3t3" path="res://PixelifySans-VariableFont_wght.ttf" id="2_50j67"]
+
+[node name="Splash" type="Control" unique_id=1175544491]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_13jq6")
+next_scene = "uid://1hjc3yybnthx"
+
+[node name="Background" type="ColorRect" parent="." unique_id=236840932]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.050980393, 0.050980393, 0.050980393, 1)
+
+[node name="Logo" type="TextureRect" parent="." unique_id=1164784690]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = -241.0
+offset_right = 128.0
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("1_b04ml")
+
+[node name="Label" type="Label" parent="Logo" unique_id=1817100040]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.2727
+offset_top = 189.2727
+offset_right = 334.7273
+offset_bottom = 334.2727
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_50j67")
+theme_override_font_sizes/font_size = 120
+text = "OCEAN LIFT"

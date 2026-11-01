@@ -9,7 +9,7 @@ const ELEVATOR_SCENE := "res://Level/elevator.tscn" # kendi yolunu yaz
 var credits_started := false
 
 func _ready():
-	print("ocean: ", GameState2.ocean_color_changed,
+	print("ocean: ", GameState2.filter_machine_completed,
 		" | trash: ", GameState2.trash_cleaned,
 		" | fish: ", GameState2.fish_revealed)
 	apply_state()
@@ -32,7 +32,7 @@ func check_credits() -> void:
 		return
 
 	var check1: bool = GameState2.fish_revealed
-	var check2: bool = GameState2.ocean_color_changed
+	var check2: bool = GameState2.filter_machine_completed
 	var check3: bool = GameState2.trash_cleaned
 
 	if check1 and check2 and check3:

@@ -1,0 +1,141 @@
+[gd_scene format=3 uid="uid://ujsw3wtxi7l3"]
+
+[ext_resource type="Texture2D" uid="uid://dvhcaqb8l2hsy" path="res://Sprites/Background/Room_1.png" id="1_v3t4o"]
+[ext_resource type="Texture2D" uid="uid://d2jed0qr05rxl" path="res://Sprites/Aquarium.png" id="2_8ueox"]
+[ext_resource type="Script" uid="uid://c8o4n5mt0xg47" path="res://turtle.gd" id="3_cs4p6"]
+[ext_resource type="Texture2D" uid="uid://dfoaw8guh32ji" path="res://Sprites/Turtle.png" id="4_2a23t"]
+[ext_resource type="PackedScene" uid="uid://colkvh7or1ok0" path="res://player1.tscn" id="4_fcwr2"]
+[ext_resource type="Script" uid="uid://dk5t4131fkjfs" path="res://Level/elevator.gd" id="5_fcwr2"]
+[ext_resource type="Script" uid="uid://qof1vwclrvh6" path="res://item.gd" id="5_j3fqx"]
+[ext_resource type="Texture2D" uid="uid://78jrcox4ev41" path="res://Sprites/Clorine_Bottle.png" id="6_mtk2s"]
+[ext_resource type="Texture2D" uid="uid://bsx5inxait2ah" path="res://Sprites/Cobweb.png" id="7_fkmq1"]
+[ext_resource type="Texture2D" uid="uid://d2vkjww6g1300" path="res://Sprites/Background/Floor3/net1.png" id="7_r4lea"]
+[ext_resource type="Texture2D" uid="uid://bgkv1hxccnhi0" path="res://Sprites/Background/Floor3/net2.png" id="8_6qk03"]
+[ext_resource type="Texture2D" uid="uid://lvhyxi1nqwld" path="res://Sprites/Background/Floor3/net3.png" id="9_ya3bk"]
+[ext_resource type="Texture2D" uid="uid://b8n5s8uohygxq" path="res://Sprites/Background/Floor3/net4.png" id="10_703m3"]
+[ext_resource type="Texture2D" uid="uid://dnd6yfi3a4534" path="res://Sprites/Background/Floor3/net5.png" id="11_lkghk"]
+[ext_resource type="Texture2D" uid="uid://b87q212ejhmn5" path="res://Sprites/E_Keycap.png" id="14_2a23t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pvcbx"]
+size = Vector2(1728, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fcwr2"]
+size = Vector2(24, 914)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2qei5"]
+size = Vector2(432, 416)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t6fs7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ll2yg"]
+size = Vector2(95, 217.5)
+
+[node name="Kat3" type="Node2D" unique_id=2106610563]
+
+[node name="Room1" type="Sprite2D" parent="." unique_id=1740128364]
+position = Vector2(960, 536)
+texture = ExtResource("1_v3t4o")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Room1" unique_id=1602237107]
+position = Vector2(-48, 448)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Room1/StaticBody2D" unique_id=2053069147]
+position = Vector2(48, 0)
+shape = SubResource("RectangleShape2D_pvcbx")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Room1/StaticBody2D" unique_id=1600453108]
+position = Vector2(48, -896)
+shape = SubResource("RectangleShape2D_pvcbx")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Room1" unique_id=738938360]
+position = Vector2(-960, -552)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Room1/StaticBody2D2" unique_id=1979185818]
+position = Vector2(92, 551)
+shape = SubResource("RectangleShape2D_fcwr2")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Room1/StaticBody2D2" unique_id=768083930]
+position = Vector2(1824, 551)
+shape = SubResource("RectangleShape2D_fcwr2")
+
+[node name="Aquarium" type="Sprite2D" parent="." unique_id=1715856160]
+position = Vector2(992, 592)
+texture = ExtResource("2_8ueox")
+
+[node name="Turtle" type="Area2D" parent="." unique_id=2096838603]
+position = Vector2(1000, 864)
+collision_layer = 8
+script = ExtResource("3_cs4p6")
+texture_with_bottle = ExtResource("4_2a23t")
+texture_without_bottle = ExtResource("4_2a23t")
+
+[node name="TurtleSprite" type="Sprite2D" parent="Turtle" unique_id=931546951]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Turtle" unique_id=838481830]
+shape = SubResource("RectangleShape2D_2qei5")
+
+[node name="MouthPoint" type="Marker2D" parent="Turtle" unique_id=1935166803]
+unique_name_in_owner = true
+position = Vector2(-72, -24)
+
+[node name="Item" type="RigidBody2D" parent="Turtle/MouthPoint" unique_id=1094159161]
+unique_name_in_owner = true
+collision_layer = 4
+script = ExtResource("5_j3fqx")
+item_name = "ClorineBottle"
+texture = ExtResource("6_mtk2s")
+
+[node name="ItemSprite" type="Sprite2D" parent="Turtle/MouthPoint/Item" unique_id=1620493574]
+unique_name_in_owner = true
+rotation = -1.5707964
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Turtle/MouthPoint/Item" unique_id=80498181]
+scale = Vector2(1.8, 1.8)
+shape = SubResource("RectangleShape2D_t6fs7")
+
+[node name="Webs" type="Node2D" parent="Turtle" unique_id=1671422761]
+
+[node name="Web1" type="Sprite2D" parent="Turtle/Webs" unique_id=1489848767]
+position = Vector2(64, 24)
+rotation = 0.96843684
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("7_fkmq1")
+
+[node name="Web2" type="Sprite2D" parent="Turtle/Webs" unique_id=1586733344]
+position = Vector2(80, -48)
+rotation = -0.45203987
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("7_fkmq1")
+
+[node name="Web3" type="Sprite2D" parent="Turtle/Webs" unique_id=1270264061]
+position = Vector2(16, -72)
+rotation = 1.8368738
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("7_fkmq1")
+
+[node name="Web4" type="Sprite2D" parent="Turtle/Webs" unique_id=672908074]
+position = Vector2(-8, 56)
+rotation = -0.89738905
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("7_fkmq1")
+
+[node name="Web5" type="Sprite2D" parent="Turtle/Webs" unique_id=1198732284]
+position = Vector2(-56, 0)
+rotation = 1.0993326
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("7_fkmq1")
+
+[node name="Player1" parent="." unique_id=388676567 instance=ExtResource("4_fcwr2")]
+position = Vector2(200, 896)
+collision_layer = 4
+
+[node name="Elevator" type="Area2D" parent="." unique_id=181471982]
+position = Vector2(-960, -540)
+collision_mask = 4
+script = ExtResource("5_fcwr2")
+e_icon_texture = ExtResource("14_2a23t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Elevator" unique_id=2070319429]
+position = Vector2(1112, 1405)
+shape = SubResource("RectangleShape2D_ll2yg")
