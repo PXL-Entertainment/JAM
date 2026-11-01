@@ -84,7 +84,6 @@ texture_active = ExtResource("6_nqbev")
 [node name="Sprite2D" type="Sprite2D" parent="FilterMachine" unique_id=544549503]
 unique_name_in_owner = true
 position = Vector2(0, 40)
-texture = ExtResource("5_x15an")
 script = ExtResource("8_0v5yh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FilterMachine" unique_id=1174811647]
