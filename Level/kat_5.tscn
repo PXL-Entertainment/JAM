@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://b23tdy31j5hsw"]
 
+[ext_resource type="Script" uid="uid://cpvsv1dp4qtjs" path="res://Level/kat_5.gd" id="1_37mxl"]
 [ext_resource type="Texture2D" uid="uid://bwe5s2dhbkq48" path="res://Sprites/Background/Ocean.png" id="1_yic21"]
 [ext_resource type="Texture2D" uid="uid://cnolo2bd7b8a5" path="res://Sprites/Trashes/Trash_4.png" id="2_37mxl"]
 [ext_resource type="Texture2D" uid="uid://dogpqx46tbtvp" path="res://Sprites/Trashes/Trash_2.png" id="3_uh5ub"]
@@ -10,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://cydak2hbk0fwv" path="res://Sprites/NPCs/fish2.png" id="8_74j0o"]
 
 [node name="kat_5" type="Node2D" unique_id=397190726]
+script = ExtResource("1_37mxl")
 
 [node name="Ocean" type="Sprite2D" parent="." unique_id=27045143]
 modulate = Color(0, 0, 1, 1)
