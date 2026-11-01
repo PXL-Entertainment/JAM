@@ -28,7 +28,7 @@ shape = SubResource("WorldBoundaryShape2D_7g42v")
 script = ExtResource("3_nevrd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="elevator 2d" unique_id=1830756690]
-position = Vector2(963, 856.25)
+position = Vector2(960, 861)
 shape = SubResource("RectangleShape2D_8r3jq")
 
 [node name="Player1" parent="." unique_id=388676567 instance=ExtResource("3_xmg5n")]
