@@ -9,6 +9,7 @@ func _ready() -> void:
 	disabled = false
 	mouse_filter = Control.MOUSE_FILTER_STOP
 	pressed.connect(_on_pressed)
+	
 
 func _on_pressed() -> void:
 	if target_scene == "":

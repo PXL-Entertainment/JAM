@@ -19,7 +19,7 @@ metadata/_edit_horizontal_guides_ = [56.0]
 
 [node name="Panel" type="Sprite2D" parent="." unique_id=284858112]
 position = Vector2(926.00006, 565.00006)
-scale = Vector2(4, 4)
+scale = Vector2(3.2, 3.2)
 texture = ExtResource("1_1jhyo")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1969981553]
@@ -32,60 +32,67 @@ offset_bottom = 40.0
 
 [node name="Button" type="Button" parent="CanvasLayer/Control" unique_id=1822633193]
 layout_mode = 0
-offset_left = 745.0
-offset_top = 680.0
-offset_right = 817.0
-offset_bottom = 752.0
+offset_left = 992.0
+offset_top = 696.0
+offset_right = 1096.0
+offset_bottom = 800.0
 scale = Vector2(1.5, 1.5)
 icon = ExtResource("1_lxaep")
+flat = true
 script = ExtResource("2_hmyla")
 
 [node name="Button2" type="Button" parent="CanvasLayer/Control" unique_id=414593928]
 layout_mode = 0
-offset_left = 1000.0
-offset_top = 680.0
-offset_right = 1072.0
-offset_bottom = 752.0
+offset_left = 712.0
+offset_top = 488.00003
+offset_right = 816.0
+offset_bottom = 592.0
 scale = Vector2(1.5, 1.5)
 icon = ExtResource("3_ngv1u")
+flat = true
 script = ExtResource("4_7mu4q")
 
 [node name="Button3" type="Button" parent="CanvasLayer/Control" unique_id=1492259998]
 layout_mode = 0
-offset_left = 745.0
-offset_top = 510.0
-offset_right = 817.0
-offset_bottom = 582.0
+offset_left = 992.00006
+offset_top = 488.0
+offset_right = 1096.0
+offset_bottom = 592.0
 scale = Vector2(1.5, 1.5)
 icon = ExtResource("4_f8hqu")
+flat = true
 script = ExtResource("6_7mu4q")
 
 [node name="Button4" type="Button" parent="CanvasLayer/Control" unique_id=2083904383]
 layout_mode = 0
-offset_left = 1000.0
-offset_top = 510.0
-offset_right = 1072.0
-offset_bottom = 582.0
+offset_left = 712.0
+offset_top = 280.0
+offset_right = 816.0
+offset_bottom = 384.0
 scale = Vector2(1.5, 1.5)
 icon = ExtResource("5_7mu4q")
+flat = true
 script = ExtResource("8_kr768")
 
 [node name="Button5" type="Button" parent="CanvasLayer/Control" unique_id=1633200993]
 layout_mode = 0
-offset_left = 1000.0
-offset_top = 340.0
-offset_right = 1072.0
-offset_bottom = 412.0
+offset_left = 992.00006
+offset_top = 280.0
+offset_right = 1096.0
+offset_bottom = 384.0
 scale = Vector2(1.5, 1.5)
 icon = ExtResource("6_kr768")
+flat = true
 script = ExtResource("10_yg122")
 
 [node name="Button6" type="Button" parent="CanvasLayer/Control" unique_id=306725391]
 layout_mode = 0
-offset_left = 745.0
-offset_top = 340.0
-offset_right = 817.0
-offset_bottom = 412.0
+offset_left = 720.0
+offset_top = 704.0
+offset_right = 824.0
+offset_bottom = 808.0
 scale = Vector2(1.5, 1.5)
+pivot_offset = Vector2(21.259277, 24.518509)
 icon = ExtResource("11_1jhyo")
+flat = true
 script = ExtResource("12_1jhyo")

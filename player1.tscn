@@ -5,21 +5,21 @@
 [ext_resource type="Texture2D" uid="uid://yjalrpt165n6" path="res://Sprites/Characters/Character_Running_Sheet.png" id="2_onrkg"]
 [ext_resource type="Script" uid="uid://bchyh6gipysul" path="res://ilke.gd" id="3_i3pqv"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_sweqy"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_woueq"]
 atlas = ExtResource("2_hqtel")
-region = Rect2(0, 0, 128, 128)
+region = Rect2(0, 0, 192, 192)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2hs0m"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_bjfdx"]
 atlas = ExtResource("2_hqtel")
-region = Rect2(128, 0, 128, 128)
+region = Rect2(192, 0, 192, 192)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_i3pqv"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_3pafw"]
 atlas = ExtResource("2_onrkg")
-region = Rect2(0, 0, 128, 128)
+region = Rect2(0, 0, 192, 192)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_hqtel"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_3odsw"]
 atlas = ExtResource("2_onrkg")
-region = Rect2(128, 0, 128, 128)
+region = Rect2(192, 0, 192, 192)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_t6fs7"]
 animations = [{
@@ -30,10 +30,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_sweqy")
+"texture": SubResource("AtlasTexture_woueq")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_2hs0m")
+"texture": SubResource("AtlasTexture_bjfdx")
 }],
 "loop": 1,
 "name": &"idle",
@@ -41,10 +41,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_i3pqv")
+"texture": SubResource("AtlasTexture_3pafw")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_hqtel")
+"texture": SubResource("AtlasTexture_3odsw")
 }],
 "loop": 1,
 "name": &"running",
@@ -52,22 +52,26 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t6fs7"]
-size = Vector2(48, 80)
+size = Vector2(98.875, 150.375)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6w1u4"]
-size = Vector2(96, 256)
+size = Vector2(108, 256)
 
 [node name="Player1" type="CharacterBody2D" unique_id=388676567 groups=["player"]]
 script = ExtResource("1_onrkg")
 
 [node name="İlke" type="AnimatedSprite2D" parent="." unique_id=1999178516]
 unique_name_in_owner = true
+position = Vector2(4, 3)
+scale = Vector2(1.0625, 1.046875)
 sprite_frames = SubResource("SpriteFrames_t6fs7")
-animation = &"running"
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.35871005
 script = ExtResource("3_i3pqv")
 
 [node name="Hitbox" type="CollisionShape2D" parent="." unique_id=1387081756]
-position = Vector2(0, 4)
+position = Vector2(6.5625, 5.8125)
 shape = SubResource("RectangleShape2D_t6fs7")
 
 [node name="HoldPoint" type="Marker2D" parent="." unique_id=1243332035]
@@ -77,4 +81,5 @@ position = Vector2(0, -64)
 collision_mask = 12
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PickupArea" unique_id=1479690356]
+position = Vector2(6, 0)
 shape = SubResource("RectangleShape2D_6w1u4")

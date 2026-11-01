@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://cw81ied2tn0f5"]
+
+[ext_resource type="Texture2D" uid="uid://c1h24y4xhivs1" path="res://Sprites/Background/Elevator/Panel.png" id="1_1jhyo"]
+[ext_resource type="Texture2D" uid="uid://428dvf0uht1w" path="res://Sprites/Buttons/Button_1.png" id="1_lxaep"]
+[ext_resource type="Script" uid="uid://j7eqvpv6xatd" path="res://Level/button.gd" id="2_hmyla"]
+[ext_resource type="Texture2D" uid="uid://kgj5yw5dx8v" path="res://Sprites/Buttons/Button_2.png" id="3_ngv1u"]
+[ext_resource type="Script" uid="uid://dmoei7diewdsx" path="res://Level/button_2.gd" id="4_7mu4q"]
+[ext_resource type="Texture2D" uid="uid://tsaaya3x11dy" path="res://Sprites/Buttons/Button_3.png" id="4_f8hqu"]
+[ext_resource type="Texture2D" uid="uid://caioak3poxix4" path="res://Sprites/Buttons/Button_4.png" id="5_7mu4q"]
+[ext_resource type="Script" uid="uid://bydvfamcrmyff" path="res://Level/button_3.gd" id="6_7mu4q"]
+[ext_resource type="Texture2D" uid="uid://d1e5i0yhdnlsp" path="res://Sprites/Buttons/Button_5.png" id="6_kr768"]
+[ext_resource type="Script" uid="uid://wvplfu6oatq" path="res://Level/button_4.gd" id="8_kr768"]
+[ext_resource type="Script" uid="uid://c2y52rpoli7bq" path="res://Level/button_5.gd" id="10_yg122"]
+[ext_resource type="Texture2D" uid="uid://b7y1kflbrliln" path="res://Sprites/Buttons/Button_0.png" id="11_1jhyo"]
+[ext_resource type="Script" uid="uid://dg3mgt3s7yjru" path="res://Level/button_6.gd" id="12_1jhyo"]
+
+[node name="Elevator" type="Node2D" unique_id=1160671356]
+metadata/_edit_horizontal_guides_ = [56.0]
+
+[node name="Panel" type="Sprite2D" parent="." unique_id=284858112]
+position = Vector2(926.00006, 565.00006)
+scale = Vector2(3.2, 3.2)
+texture = ExtResource("1_1jhyo")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1969981553]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=2121342103]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="CanvasLayer/Control" unique_id=1822633193]
+layout_mode = 0
+offset_left = 992.0
+offset_top = 696.0
+offset_right = 1096.0
+offset_bottom = 800.0
+scale = Vector2(1.5, 1.5)
+icon = ExtResource("1_lxaep")
+flat = true
+script = ExtResource("2_hmyla")
+
+[node name="Button2" type="Button" parent="CanvasLayer/Control" unique_id=414593928]
+layout_mode = 0
+offset_left = 712.0
+offset_top = 488.00003
+offset_right = 816.0
+offset_bottom = 592.0
+scale = Vector2(1.5, 1.5)
+icon = ExtResource("3_ngv1u")
+flat = true
+script = ExtResource("4_7mu4q")
+
+[node name="Button3" type="Button" parent="CanvasLayer/Control" unique_id=1492259998]
+layout_mode = 0
+offset_left = 992.00006
+offset_top = 488.0
+offset_right = 1096.0
+offset_bottom = 592.0
+scale = Vector2(1.5, 1.5)
+icon = ExtResource("4_f8hqu")
+flat = true
+script = ExtResource("6_7mu4q")
+
+[node name="Button4" type="Button" parent="CanvasLayer/Control" unique_id=2083904383]
+layout_mode = 0
+offset_left = 712.0
+offset_top = 280.0
+offset_right = 816.0
+offset_bottom = 384.0
+scale = Vector2(1.5, 1.5)
+icon = ExtResource("5_7mu4q")
+flat = true
+script = ExtResource("8_kr768")
+
+[node name="Button5" type="Button" parent="CanvasLayer/Control" unique_id=1633200993]
+layout_mode = 0
+offset_left = 992.00006
+offset_top = 280.0
+offset_right = 1096.0
+offset_bottom = 384.0
+scale = Vector2(1.5, 1.5)
+icon = ExtResource("6_kr768")
+flat = true
+script = ExtResource("10_yg122")
+
+[node name="Button6" type="Button" parent="CanvasLayer/Control" unique_id=306725391]
+layout_mode = 0
+offset_left = 720.0
+offset_top = 704.0
+offset_right = 824.0
+offset_bottom = 808.0
+scale = Vector2(1.5, 1.5)
+pivot_offset = Vector2(21.259277, 24.518509)
+icon = ExtResource("11_1jhyo")
+flat = true
+script = ExtResource("12_1jhyo")
