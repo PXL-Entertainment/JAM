@@ -9,6 +9,10 @@
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_7g42v"]
 distance = -0.666687
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_t6fs7"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2qei5"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8r3jq"]
 size = Vector2(376, 320.5)
 
@@ -22,9 +26,19 @@ texture = ExtResource("1_nevrd")
 position = Vector2(-583, 427)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background0/StaticBody2D" unique_id=17686098]
-position = Vector2(548, 54)
+position = Vector2(548, 50)
 scale = Vector2(11, 3)
 shape = SubResource("WorldBoundaryShape2D_7g42v")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Background0/StaticBody2D" unique_id=572144698]
+position = Vector2(-376, -307)
+rotation = 1.5707964
+shape = SubResource("WorldBoundaryShape2D_t6fs7")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Background0/StaticBody2D" unique_id=1272731727]
+position = Vector2(1541, -280)
+rotation = -1.5707964
+shape = SubResource("WorldBoundaryShape2D_2qei5")
 
 [node name="elevator 2d" type="Area2D" parent="." unique_id=1479630000]
 script = ExtResource("3_nevrd")

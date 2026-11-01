@@ -78,7 +78,7 @@ shape = SubResource("RectangleShape2D_7ifsx")
 position = Vector2(0, -8)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=325693664]
-position = Vector2(880, 984)
+position = Vector2(880, 992)
 shape = SubResource("WorldBoundaryShape2D_t6fs7")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=553923016]
@@ -112,5 +112,5 @@ unique_name_in_owner = true
 libraries/ = SubResource("AnimationLibrary_e3t03")
 
 [node name="Player1" parent="." unique_id=388676567 instance=ExtResource("3_xavdf")]
-position = Vector2(147, 934)
+position = Vector2(160, 888)
 collision_layer = 4

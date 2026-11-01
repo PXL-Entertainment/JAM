@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://pvn0rfx0m7rr"
+path="res://.godot/imported/Recycle Machine.wav-b95abcdaa5747e1f74dc459bed7f5738.sample"
+
+[deps]
+
+source_file="res://Sounds/Recycle Machine.wav"
+dest_files=["res://.godot/imported/Recycle Machine.wav-b95abcdaa5747e1f74dc459bed7f5738.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

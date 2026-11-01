@@ -52,7 +52,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t6fs7"]
-size = Vector2(98.875, 150.375)
+size = Vector2(98.875, 141.375)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6w1u4"]
 size = Vector2(108, 256)
@@ -71,7 +71,7 @@ frame_progress = 0.35871005
 script = ExtResource("3_i3pqv")
 
 [node name="Hitbox" type="CollisionShape2D" parent="." unique_id=1387081756]
-position = Vector2(6.5625, 5.8125)
+position = Vector2(6.5625, 1.3125)
 shape = SubResource("RectangleShape2D_t6fs7")
 
 [node name="HoldPoint" type="Marker2D" parent="." unique_id=1243332035]
