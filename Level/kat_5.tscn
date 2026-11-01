@@ -14,7 +14,7 @@
 script = ExtResource("1_37mxl")
 
 [node name="Ocean" type="Sprite2D" parent="." unique_id=27045143]
-modulate = Color(0, 0, 1, 1)
+modulate = Color(0, 0.627451, 1, 1)
 position = Vector2(960, 540)
 texture = ExtResource("1_yic21")
 
