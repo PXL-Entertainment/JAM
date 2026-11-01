@@ -60,5 +60,6 @@ func _process(_delta: float) -> void:
 	if not is_instance_valid(bottle) or bottle.get_parent() != mouth_point:
 		bottle_taken = true
 		GameState2.turtle_bottle_taken = true
+		GameState2.fish_revealed = true
 		if texture_without_bottle:
 			$TurtleSprite.texture = texture_without_bottle

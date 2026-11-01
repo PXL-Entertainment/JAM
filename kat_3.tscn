@@ -8,11 +8,7 @@
 [ext_resource type="Script" uid="uid://dk5t4131fkjfs" path="res://Level/elevator.gd" id="5_fcwr2"]
 [ext_resource type="Script" uid="uid://qof1vwclrvh6" path="res://item.gd" id="5_j3fqx"]
 [ext_resource type="Texture2D" uid="uid://78jrcox4ev41" path="res://Sprites/Clorine_Bottle.png" id="6_mtk2s"]
-[ext_resource type="Texture2D" uid="uid://d2vkjww6g1300" path="res://Sprites/Background/Floor3/net1.png" id="7_r4lea"]
-[ext_resource type="Texture2D" uid="uid://bgkv1hxccnhi0" path="res://Sprites/Background/Floor3/net2.png" id="8_6qk03"]
-[ext_resource type="Texture2D" uid="uid://lvhyxi1nqwld" path="res://Sprites/Background/Floor3/net3.png" id="9_ya3bk"]
-[ext_resource type="Texture2D" uid="uid://b8n5s8uohygxq" path="res://Sprites/Background/Floor3/net4.png" id="10_703m3"]
-[ext_resource type="Texture2D" uid="uid://dnd6yfi3a4534" path="res://Sprites/Background/Floor3/net5.png" id="11_lkghk"]
+[ext_resource type="Texture2D" uid="uid://bsx5inxait2ah" path="res://Sprites/Cobweb.png" id="7_fkmq1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pvcbx"]
 size = Vector2(1728, 20)
@@ -95,29 +91,42 @@ shape = SubResource("RectangleShape2D_t6fs7")
 [node name="Webs" type="Node2D" parent="Turtle" unique_id=1671422761]
 
 [node name="Web1" type="Sprite2D" parent="Turtle/Webs" unique_id=1489848767]
-texture = ExtResource("7_r4lea")
+position = Vector2(64, 24)
+rotation = 0.96843684
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("7_fkmq1")
 
 [node name="Web2" type="Sprite2D" parent="Turtle/Webs" unique_id=1586733344]
 position = Vector2(80, -48)
-texture = ExtResource("8_6qk03")
+rotation = -0.45203987
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("7_fkmq1")
 
 [node name="Web3" type="Sprite2D" parent="Turtle/Webs" unique_id=1270264061]
-position = Vector2(16, -80)
-texture = ExtResource("9_ya3bk")
+position = Vector2(16, -72)
+rotation = 1.8368738
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("7_fkmq1")
 
 [node name="Web4" type="Sprite2D" parent="Turtle/Webs" unique_id=672908074]
 position = Vector2(-8, 56)
-texture = ExtResource("10_703m3")
+rotation = -0.89738905
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("7_fkmq1")
 
 [node name="Web5" type="Sprite2D" parent="Turtle/Webs" unique_id=1198732284]
 position = Vector2(-56, 0)
-texture = ExtResource("11_lkghk")
+rotation = 1.0993326
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("7_fkmq1")
 
 [node name="Player1" parent="." unique_id=388676567 instance=ExtResource("4_fcwr2")]
 position = Vector2(200, 896)
+collision_layer = 4
 
 [node name="Elevator" type="Area2D" parent="." unique_id=181471982]
 position = Vector2(-960, -540)
+collision_mask = 4
 script = ExtResource("5_fcwr2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Elevator" unique_id=2070319429]
