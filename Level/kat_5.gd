@@ -17,3 +17,10 @@ func apply_state():
 
 	for f in hidden_fish:
 		f.visible = GameState2.fish_revealed
+
+const ELEVATOR_SCENE := "res://Level/elevator.tscn" # kendi yolunu yaz
+
+func _unhandled_input(event):
+	if event.is_action_pressed("interaction") and GameState2.elevator_return_enabled:
+		GameState2.last_floor = "kat_5"
+		get_tree().change_scene_to_file(ELEVATOR_SCENE)

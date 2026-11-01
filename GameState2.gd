@@ -5,3 +5,12 @@ var trash_cleaned := false
 var fish_revealed := false
 
 var ocean_color := Color(0x00a0ffff)
+
+signal elevator_return_changed(enabled: bool)
+
+var elevator_return_enabled := true:
+	set(value):
+		elevator_return_enabled = value
+		elevator_return_changed.emit(value)
+
+var last_floor := ""
