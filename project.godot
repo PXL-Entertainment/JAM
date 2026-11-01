@@ -16,6 +16,10 @@ config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="uid://c1yfmkfch8cgx"
 config/windows_native_icon="res://Sprites/Icons/Game Icon.ico"
 
+[autoload]
+
+GameState2="*uid://clffietusmpl3"
+
 [display]
 
 window/size/viewport_width=1920
