@@ -3,18 +3,28 @@
 [ext_resource type="Texture2D" uid="uid://dvhcaqb8l2hsy" path="res://Sprites/Background/Room_1.png" id="1_7l3kr"]
 [ext_resource type="Script" uid="uid://dk5t4131fkjfs" path="res://Level/elevator.gd" id="2_f2x2t"]
 [ext_resource type="PackedScene" uid="uid://colkvh7or1ok0" path="res://player1.tscn" id="3_1j4ha"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_km56p"]
-size = Vector2(95, 217.5)
+[ext_resource type="Texture2D" uid="uid://d2jed0qr05rxl" path="res://Sprites/Aquarium.png" id="3_pd6yx"]
+[ext_resource type="PackedScene" uid="uid://dvrb2ro67pwyp" path="res://item.tscn" id="5_7nx8g"]
+[ext_resource type="Texture2D" uid="uid://jetdxe8vfttl" path="res://Sprites/Micro_Filter.png" id="6_yj4m8"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_pd6yx"]
 distance = -327.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_km56p"]
+size = Vector2(95, 217.5)
 
 [node name="kat_4" type="Node2D" unique_id=1815162708]
 
 [node name="Room1" type="Sprite2D" parent="." unique_id=1257937005]
 position = Vector2(960, 540)
 texture = ExtResource("1_7l3kr")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Room1" unique_id=1982240675]
+position = Vector2(-960, -540)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Room1/StaticBody2D" unique_id=1218441213]
+scale = Vector2(15, 3)
+shape = SubResource("WorldBoundaryShape2D_pd6yx")
 
 [node name="Elevator" type="Area2D" parent="Room1" unique_id=1438253899]
 position = Vector2(-960, -540)
@@ -24,11 +34,15 @@ script = ExtResource("2_f2x2t")
 position = Vector2(149, 870)
 shape = SubResource("RectangleShape2D_km56p")
 
+[node name="Sprite2D" type="Sprite2D" parent="Room1" unique_id=2093348374]
+position = Vector2(320, 316)
+scale = Vector2(0.32, 0.32)
+texture = ExtResource("3_pd6yx")
+
 [node name="Player1" parent="." unique_id=388676567 instance=ExtResource("3_1j4ha")]
 position = Vector2(147, 934)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1982240675]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1218441213]
-scale = Vector2(15, 3)
-shape = SubResource("WorldBoundaryShape2D_pd6yx")
+[node name="Item" parent="." unique_id=1094159161 instance=ExtResource("5_7nx8g")]
+position = Vector2(1152, 968)
+item_name = "MicroFilter"
+texture = ExtResource("6_yj4m8")
