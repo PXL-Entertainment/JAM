@@ -7,8 +7,11 @@
 [ext_resource type="PackedScene" uid="uid://dvrb2ro67pwyp" path="res://item.tscn" id="5_7nx8g"]
 [ext_resource type="Texture2D" uid="uid://jetdxe8vfttl" path="res://Sprites/Micro_Filter.png" id="6_yj4m8"]
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_pd6yx"]
-distance = -327.0
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_t6fs7"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2qei5"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_brl05"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_km56p"]
 size = Vector2(95, 217.5)
@@ -20,11 +23,20 @@ position = Vector2(960, 540)
 texture = ExtResource("1_7l3kr")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Room1" unique_id=1982240675]
-position = Vector2(-960, -540)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Room1/StaticBody2D" unique_id=1218441213]
-scale = Vector2(15, 3)
-shape = SubResource("WorldBoundaryShape2D_pd6yx")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Room1/StaticBody2D" unique_id=1525922685]
+position = Vector2(-16, 444)
+shape = SubResource("WorldBoundaryShape2D_t6fs7")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Room1/StaticBody2D" unique_id=1469404388]
+position = Vector2(-856, 0)
+rotation = 1.5707964
+shape = SubResource("WorldBoundaryShape2D_2qei5")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Room1/StaticBody2D" unique_id=2058765449]
+position = Vector2(856, 4)
+rotation = -1.5707964
+shape = SubResource("WorldBoundaryShape2D_brl05")
 
 [node name="Elevator" type="Area2D" parent="Room1" unique_id=1438253899]
 position = Vector2(-960, -540)

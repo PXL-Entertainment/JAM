@@ -9,6 +9,92 @@
 [ext_resource type="Texture2D" uid="uid://23bgyq3jw32d" path="res://Sprites/NPCs/fish3.png" id="6_ufsa1"]
 [ext_resource type="Texture2D" uid="uid://csrysegpg80ml" path="res://Sprites/NPCs/fish1.png" id="7_kexbr"]
 [ext_resource type="Texture2D" uid="uid://cydak2hbk0fwv" path="res://Sprites/NPCs/fish2.png" id="8_74j0o"]
+[ext_resource type="FontFile" uid="uid://dd8u52rjrt3t3" path="res://PixelifySans-VariableFont_wght.ttf" id="10_uh5ub"]
+
+[sub_resource type="Animation" id="Animation_37mxl"]
+resource_name = "Credits"
+length = 28.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Credits/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0.05109611, 0.05109611, 0.051096074, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Credits/ColorRect/Label:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2.2, 7.2, 12.4, 17.6, 22.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": ["Samed Mert Genç", "İlke Kuzey Tamdoğan", "Tunahan Demirel", "Hilmi Tunahan Karataş", "Ege Kaba"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Credits/ColorRect/Label:theme_override_colors/font_color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(2.2, 3.2, 4.2, 7.2, 7.4, 8.4, 9.4, 12.4, 13.6, 17.6, 17.8, 18.8, 19.8, 22.8, 23, 24, 25, 28),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(0.9843137, 0.9647059, 0.9529412, 0), Color(0.9843137, 0.9647059, 0.9529412, 1), Color(0.9843137, 0.9647059, 0.9529412, 1), Color(0.9843137, 0.9647059, 0.9529412, 0), Color(0.9843137, 0.9647059, 0.9529412, 0), Color(0.9843137, 0.9647059, 0.9529412, 1), Color(0.9843137, 0.9647059, 0.9529412, 1), Color(0.9843137, 0.9647059, 0.9529412, 0), Color(0.9843137, 0.9647059, 0.9529412, 1), Color(0.9843137, 0.9647059, 0.9529412, 0), Color(0.9843137, 0.9647059, 0.9529412, 0), Color(0.9843137, 0.9647059, 0.9529412, 1), Color(0.9843137, 0.9647059, 0.9529412, 1), Color(0.9843137, 0.9647059, 0.9529412, 0), Color(0.9843137, 0.9647059, 0.9529412, 0), Color(0.9843137, 0.9647059, 0.9529412, 1), Color(0.9843137, 0.9647059, 0.9529412, 1), Color(0.9843137, 0.9647059, 0.9529412, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_uh5ub"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Credits/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Credits/ColorRect/Label:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Samed Mert Genç"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Credits/ColorRect/Label:theme_override_colors/font_color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.9843137, 0.9647059, 0.9529412, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_uh5ub"]
+_data = {
+&"Credits": SubResource("Animation_37mxl"),
+&"RESET": SubResource("Animation_uh5ub")
+}
 
 [node name="kat_5" type="Node2D" unique_id=397190726]
 script = ExtResource("1_37mxl")
@@ -89,3 +175,35 @@ position = Vector2(-50, -878)
 rotation = 0.110759996
 texture = ExtResource("8_74j0o")
 flip_h = true
+
+[node name="Credits" type="CanvasLayer" parent="." unique_id=933846517]
+
+[node name="ColorRect" type="ColorRect" parent="Credits" unique_id=1754140863]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+
+[node name="Label" type="Label" parent="Credits/ColorRect" unique_id=52627089]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -173.0
+offset_top = -48.5
+offset_right = 173.0
+offset_bottom = 48.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.9843137, 0.9647059, 0.9529412, 0)
+theme_override_fonts/font = ExtResource("10_uh5ub")
+theme_override_font_sizes/font_size = 80
+text = "Samed Mert Genç"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1956726204]
+unique_name_in_owner = true
+libraries/ = SubResource("AnimationLibrary_uh5ub")

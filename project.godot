@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Jam"
-run/main_scene="uid://c8gxggv005gfg"
+run/main_scene="uid://1hjc3yybnthx"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="uid://c1yfmkfch8cgx"
 config/windows_native_icon="res://Sprites/Icons/Game Icon.ico"

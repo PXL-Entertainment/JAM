@@ -11,8 +11,11 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ifsx"]
 size = Vector2(95, 217.5)
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8sint"]
-distance = -327.0
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_t6fs7"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2qei5"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_rfvcf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t6fs7"]
 size = Vector2(576, 568)
@@ -69,10 +72,21 @@ position = Vector2(149, 870)
 shape = SubResource("RectangleShape2D_7ifsx")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1497952329]
+position = Vector2(0, -8)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=603097518]
-scale = Vector2(15, 3)
-shape = SubResource("WorldBoundaryShape2D_8sint")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=325693664]
+position = Vector2(880, 984)
+shape = SubResource("WorldBoundaryShape2D_t6fs7")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=553923016]
+position = Vector2(104, 584)
+rotation = 1.5707964
+shape = SubResource("WorldBoundaryShape2D_2qei5")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=2005970994]
+position = Vector2(1816, 584)
+rotation = -1.5707964
+shape = SubResource("WorldBoundaryShape2D_rfvcf")
 
 [node name="FilterMachine" type="Area2D" parent="." unique_id=2007846724]
 position = Vector2(936, 552)
