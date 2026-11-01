@@ -5,6 +5,10 @@
 [ext_resource type="Script" uid="uid://ckjwa6bcsix8w" path="res://Scripts/elevator_interaction.gd" id="3_nevrd"]
 [ext_resource type="PackedScene" uid="uid://colkvh7or1ok0" path="res://player1.tscn" id="3_xmg5n"]
 [ext_resource type="Texture2D" uid="uid://fa6obd7txdqk" path="res://Sprites/Background/Entrance/Seaweeds.png" id="4_xmg5n"]
+[ext_resource type="Texture2D" uid="uid://blkk4iv1hvl0p" path="res://Sprites/Left_Keycap.png" id="6_p3spw"]
+[ext_resource type="Texture2D" uid="uid://bra3ojefuvv58" path="res://Sprites/A_Keycap.png" id="7_xdk5i"]
+[ext_resource type="Texture2D" uid="uid://c7dnw4l2d8exe" path="res://Sprites/Right_Keycap.png" id="8_nilsv"]
+[ext_resource type="Texture2D" uid="uid://e4wrbs1ujxt6" path="res://Sprites/D_Keycap.png" id="9_x2x3d"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_7g42v"]
 distance = -0.666687
@@ -57,3 +61,19 @@ scale = Vector2(1.5, 1.5)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=592005018]
 position = Vector2(960, 536)
 texture = ExtResource("4_xmg5n")
+
+[node name="LeftKeycap" type="Sprite2D" parent="." unique_id=1077947586]
+position = Vector2(160, 360)
+texture = ExtResource("6_p3spw")
+
+[node name="AKeycap" type="Sprite2D" parent="." unique_id=731863618]
+position = Vector2(160, 152)
+texture = ExtResource("7_xdk5i")
+
+[node name="RightKeycap" type="Sprite2D" parent="." unique_id=1576407687]
+position = Vector2(1776, 360)
+texture = ExtResource("8_nilsv")
+
+[node name="DKeycap" type="Sprite2D" parent="." unique_id=2121157639]
+position = Vector2(1776, 152)
+texture = ExtResource("9_x2x3d")

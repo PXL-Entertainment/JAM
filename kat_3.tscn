@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://d2jed0qr05rxl" path="res://Sprites/Other/Aquarium.png" id="2_8ueox"]
 [ext_resource type="Script" uid="uid://c8o4n5mt0xg47" path="res://turtle.gd" id="3_cs4p6"]
 [ext_resource type="Texture2D" uid="uid://dfoaw8guh32ji" path="res://Sprites/NPCs/Turtle.png" id="4_2a23t"]
+[ext_resource type="Texture2D" uid="uid://dd5jjhfcfgok" path="res://Sprites/Other/Heart_Animation_Sheet.png" id="4_d317h"]
 [ext_resource type="PackedScene" uid="uid://colkvh7or1ok0" path="res://player1.tscn" id="4_fcwr2"]
 [ext_resource type="Script" uid="uid://dk5t4131fkjfs" path="res://Level/elevator.gd" id="5_fcwr2"]
 [ext_resource type="Script" uid="uid://qof1vwclrvh6" path="res://item.gd" id="5_j3fqx"]
@@ -61,11 +62,11 @@ texture = ExtResource("2_8ueox")
 position = Vector2(1000, 864)
 collision_layer = 8
 script = ExtResource("3_cs4p6")
-texture_with_bottle = ExtResource("4_2a23t")
-texture_without_bottle = ExtResource("4_2a23t")
+heart_sheet = ExtResource("4_d317h")
 
 [node name="TurtleSprite" type="Sprite2D" parent="Turtle" unique_id=931546951]
 unique_name_in_owner = true
+texture = ExtResource("4_2a23t")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Turtle" unique_id=838481830]
 shape = SubResource("RectangleShape2D_2qei5")

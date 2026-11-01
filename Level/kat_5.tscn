@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://csrysegpg80ml" path="res://Sprites/NPCs/fish1.png" id="7_kexbr"]
 [ext_resource type="Texture2D" uid="uid://cydak2hbk0fwv" path="res://Sprites/NPCs/fish2.png" id="8_74j0o"]
 [ext_resource type="FontFile" uid="uid://dd8u52rjrt3t3" path="res://PixelifySans-VariableFont_wght.ttf" id="10_uh5ub"]
+[ext_resource type="Texture2D" uid="uid://b87q212ejhmn5" path="res://Sprites/E_Keycap.png" id="11_xnrdl"]
 
 [sub_resource type="Animation" id="Animation_37mxl"]
 resource_name = "Credits"
@@ -223,6 +224,11 @@ theme_override_colors/font_color = Color(0.9843137, 0.9647059, 0.9529412, 0)
 theme_override_fonts/font = ExtResource("10_uh5ub")
 theme_override_font_sizes/font_size = 80
 text = "Samed Mert Genç"
+
+[node name="EKeycap" type="Sprite2D" parent="CanvasLayer" unique_id=543420755]
+position = Vector2(101, 93)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("11_xnrdl")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1956726204]
 unique_name_in_owner = true

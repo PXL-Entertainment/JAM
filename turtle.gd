@@ -3,6 +3,13 @@ extends Area2D
 @export var texture_with_bottle: Texture2D
 @export var texture_without_bottle: Texture2D
 
+# --- Kalp animasyonu ---
+@export var heart_sheet: Texture2D
+@export var heart_frame_count: int = 10
+@export var heart_fps: float = 5.0                 # dusurdukce animasyon yavaslar/uzar
+@export var heart_offset: Vector2 = Vector2(0, -70)
+@export var heart_last_frame_hold: float = 8.0      # son kare, digerlerine gore kac kat uzun gorunsun
+
 @onready var mouth_point: Marker2D = $MouthPoint
 @onready var bottle: RigidBody2D = $MouthPoint/Item
 
@@ -63,3 +70,37 @@ func _process(_delta: float) -> void:
 		GameState2.fish_revealed = true
 		if texture_without_bottle:
 			$TurtleSprite.texture = texture_without_bottle
+		_play_heart_animation()
+
+func _play_heart_animation() -> void:
+	if heart_sheet == null:
+		return
+
+	var anim := AnimatedSprite2D.new()
+	var frames := SpriteFrames.new()
+	frames.add_animation("beat")
+	frames.set_animation_loop("beat", false)
+	frames.set_animation_speed("beat", heart_fps)
+
+	var frame_w: int = int(heart_sheet.get_width() / float(heart_frame_count))
+	var frame_h: int = heart_sheet.get_height()
+
+	for i in range(heart_frame_count):
+		var atlas := AtlasTexture.new()
+		atlas.atlas = heart_sheet
+		atlas.region = Rect2(i * frame_w, 0, frame_w, frame_h)
+
+		var duration := 1.0
+		if i == heart_frame_count - 1:
+			duration = heart_last_frame_hold
+
+		frames.add_frame("beat", atlas, duration)
+
+	anim.sprite_frames = frames
+	anim.animation = "beat"
+	anim.position = heart_offset
+	anim.z_index = 10
+
+	add_child(anim)
+	anim.play("beat")
+	anim.animation_finished.connect(anim.queue_free)
