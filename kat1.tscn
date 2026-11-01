@@ -1,9 +1,17 @@
 [gd_scene format=3 uid="uid://c8gxggv005gfg"]
 
 [ext_resource type="Texture2D" uid="uid://dvhcaqb8l2hsy" path="res://Sprites/Background/Room_1.png" id="1_vr36e"]
+<<<<<<< HEAD
 [ext_resource type="PackedScene" uid="uid://cr2idlqj4lpyf" path="res://recyle_machine.tscn" id="2_lr72d"]
 [ext_resource type="Texture2D" uid="uid://chxbn2am7fl6s" path="res://Sprites/Trashes/Trash_1.png" id="4_msnr3"]
 [ext_resource type="Texture2D" uid="uid://dogpqx46tbtvp" path="res://Sprites/Trashes/Trash_2.png" id="5_bc6mo"]
+=======
+[ext_resource type="Script" uid="uid://ce4tahae6dvai" path="res://recyle_machine.gd" id="2_qcaw7"]
+[ext_resource type="Texture2D" uid="uid://cuc5o2x0uemox" path="res://Sprites/Recycle_Machine.png" id="3_cl4cb"]
+[ext_resource type="Texture2D" uid="uid://dwxxsttunhr8t" path="res://Sprites/Recycle_Machine_Full.png" id="4_qhpvn"]
+[ext_resource type="PackedScene" uid="uid://m7l1bejddxo8" path="res://filtre.tscn" id="5_tk1ef"]
+[ext_resource type="Script" uid="uid://5h7x33bhex8t" path="res://recyle_machine_sprite.gd" id="6_hpi27"]
+>>>>>>> d3f4633834f238c32dfcfc32901915aefc5ddb25
 [ext_resource type="Script" uid="uid://qof1vwclrvh6" path="res://item.gd" id="6_vr36e"]
 [ext_resource type="PackedScene" uid="uid://colkvh7or1ok0" path="res://player1.tscn" id="7_qcaw7"]
 [ext_resource type="Texture2D" uid="uid://blvh0g5dgckr8" path="res://Sprites/Trashes/Trash_3.png" id="7_rhf8i"]
@@ -19,6 +27,46 @@ size = Vector2(1728, 20)
 size = Vector2(18, 914)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t6fs7"]
+size = Vector2(208, 248)
+
+[sub_resource type="Animation" id="Animation_sapch"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RecyleMachineSprite:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_4ma8v"]
+resource_name = "pickup"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RecyleMachineSprite:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.1, 1.1), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_e3t03"]
+_data = {
+&"RESET": SubResource("Animation_sapch"),
+&"pickup": SubResource("Animation_4ma8v")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6ff8x"]
 size = Vector2(64, 64)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_brl05"]
@@ -55,8 +103,26 @@ shape = SubResource("RectangleShape2D_rfvcf")
 position = Vector2(1824, 551)
 shape = SubResource("RectangleShape2D_rfvcf")
 
-[node name="RecyleMachine" parent="." unique_id=2007846724 instance=ExtResource("2_lr72d")]
+[node name="RecyleMachine" type="Area2D" parent="." unique_id=2007846724]
 position = Vector2(1448, 784)
+collision_layer = 8
+script = ExtResource("2_qcaw7")
+texture_idle = ExtResource("3_cl4cb")
+texture_active = ExtResource("4_qhpvn")
+reward_item_scene = ExtResource("5_tk1ef")
+
+[node name="RecyleMachineSprite" type="Sprite2D" parent="RecyleMachine" unique_id=544549503]
+unique_name_in_owner = true
+texture = ExtResource("3_cl4cb")
+script = ExtResource("6_hpi27")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RecyleMachine" unique_id=1174811647]
+position = Vector2(0, 68)
+shape = SubResource("RectangleShape2D_t6fs7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="RecyleMachine" unique_id=235171994]
+unique_name_in_owner = true
+libraries/ = SubResource("AnimationLibrary_e3t03")
 
 [node name="Item" parent="." unique_id=1094159161 instance=ExtResource("8_cl4cb")]
 position = Vector2(480, 960)
@@ -79,7 +145,7 @@ texture = ExtResource("7_rhf8i")
 unique_name_in_owner = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Item3" unique_id=80498181]
-shape = SubResource("RectangleShape2D_t6fs7")
+shape = SubResource("RectangleShape2D_6ff8x")
 
 [node name="Item4" type="RigidBody2D" parent="." unique_id=2003217374]
 position = Vector2(1104, 952)
@@ -95,6 +161,7 @@ shape = SubResource("RectangleShape2D_brl05")
 
 [node name="Player" parent="." unique_id=388676567 instance=ExtResource("7_qcaw7")]
 position = Vector2(152, 928)
+collision_layer = 12
 
 [node name="Elevator" type="Area2D" parent="." unique_id=665480470]
 script = ExtResource("11_msnr3")

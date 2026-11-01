@@ -3,12 +3,56 @@
 [ext_resource type="Texture2D" uid="uid://dvhcaqb8l2hsy" path="res://Sprites/Background/Room_1.png" id="1_it3r1"]
 [ext_resource type="Script" uid="uid://dk5t4131fkjfs" path="res://Level/elevator.gd" id="2_qcqjp"]
 [ext_resource type="PackedScene" uid="uid://colkvh7or1ok0" path="res://player1.tscn" id="3_xavdf"]
+[ext_resource type="Script" uid="uid://b8e2mgv0goqyb" path="res://Level/filter_machine.gd" id="4_8sint"]
+[ext_resource type="Texture2D" uid="uid://f56ugkgs8u4w" path="res://Sprites/Filter_Machine.png" id="5_x15an"]
+[ext_resource type="Texture2D" uid="uid://me0lof2veqgj" path="res://Sprites/Filter_Machine_Full.png" id="6_nqbev"]
+[ext_resource type="Script" uid="uid://5h7x33bhex8t" path="res://recyle_machine_sprite.gd" id="8_0v5yh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ifsx"]
 size = Vector2(95, 217.5)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8sint"]
 distance = -327.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t6fs7"]
+size = Vector2(576, 568)
+
+[sub_resource type="Animation" id="Animation_sapch"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_4ma8v"]
+resource_name = "pickup"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.1, 1.1), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_e3t03"]
+_data = {
+&"RESET": SubResource("Animation_sapch"),
+&"pickup": SubResource("Animation_4ma8v")
+}
 
 [node name="kat_2" type="Node2D" unique_id=39062392]
 
@@ -24,11 +68,32 @@ script = ExtResource("2_qcqjp")
 position = Vector2(149, 870)
 shape = SubResource("RectangleShape2D_7ifsx")
 
-[node name="Player1" parent="." unique_id=388676567 instance=ExtResource("3_xavdf")]
-position = Vector2(147, 934)
-
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1497952329]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=603097518]
 scale = Vector2(15, 3)
 shape = SubResource("WorldBoundaryShape2D_8sint")
+
+[node name="FilterMachine" type="Area2D" parent="." unique_id=2007846724]
+position = Vector2(936, 552)
+collision_layer = 8
+script = ExtResource("4_8sint")
+texture_idle = ExtResource("5_x15an")
+texture_active = ExtResource("6_nqbev")
+
+[node name="Sprite2D" type="Sprite2D" parent="FilterMachine" unique_id=544549503]
+unique_name_in_owner = true
+position = Vector2(0, 40)
+texture = ExtResource("5_x15an")
+script = ExtResource("8_0v5yh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FilterMachine" unique_id=1174811647]
+position = Vector2(0, 164)
+shape = SubResource("RectangleShape2D_t6fs7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="FilterMachine" unique_id=235171994]
+unique_name_in_owner = true
+libraries/ = SubResource("AnimationLibrary_e3t03")
+
+[node name="Player1" parent="." unique_id=388676567 instance=ExtResource("3_xavdf")]
+position = Vector2(147, 934)

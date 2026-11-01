@@ -1,3 +1,89 @@
 [gd_scene format=3 uid="uid://b23tdy31j5hsw"]
 
+[ext_resource type="Texture2D" uid="uid://bwe5s2dhbkq48" path="res://Sprites/Background/Ocean.png" id="1_yic21"]
+[ext_resource type="Texture2D" uid="uid://cnolo2bd7b8a5" path="res://Sprites/Trashes/Trash_4.png" id="2_37mxl"]
+[ext_resource type="Texture2D" uid="uid://dogpqx46tbtvp" path="res://Sprites/Trashes/Trash_2.png" id="3_uh5ub"]
+[ext_resource type="Texture2D" uid="uid://chxbn2am7fl6s" path="res://Sprites/Trashes/Trash_1.png" id="4_xnrdl"]
+[ext_resource type="Texture2D" uid="uid://blvh0g5dgckr8" path="res://Sprites/Trashes/Trash_3.png" id="5_vdgt8"]
+[ext_resource type="Texture2D" uid="uid://23bgyq3jw32d" path="res://Sprites/NPCs/fish3.png" id="6_ufsa1"]
+[ext_resource type="Texture2D" uid="uid://csrysegpg80ml" path="res://Sprites/NPCs/fish1.png" id="7_kexbr"]
+[ext_resource type="Texture2D" uid="uid://cydak2hbk0fwv" path="res://Sprites/NPCs/fish2.png" id="8_74j0o"]
+
 [node name="kat_5" type="Node2D" unique_id=397190726]
+
+[node name="Ocean" type="Sprite2D" parent="." unique_id=27045143]
+modulate = Color(0, 0, 1, 1)
+position = Vector2(960, 540)
+texture = ExtResource("1_yic21")
+
+[node name="Trash4" type="Sprite2D" parent="." unique_id=1819437933]
+position = Vector2(631.5, 892.5)
+scale = Vector2(2.078125, 1.296875)
+texture = ExtResource("2_37mxl")
+
+[node name="Trash5" type="Sprite2D" parent="Trash4" unique_id=191093396]
+position = Vector2(270.4361, 66.69879)
+rotation = 1.870294
+scale = Vector2(1.5031245, 0.7912165)
+skew = 0.37088346
+texture = ExtResource("2_37mxl")
+
+[node name="Trash2" type="Sprite2D" parent="Trash4/Trash5" unique_id=541201891]
+position = Vector2(137.42325, 703.46484)
+rotation = -1.900567
+scale = Vector2(2.9861434, 1.6736836)
+skew = -0.29115725
+texture = ExtResource("3_uh5ub")
+
+[node name="Trash1" type="Sprite2D" parent="Trash4/Trash5/Trash2" unique_id=808936240]
+position = Vector2(268.469, 0.15841675)
+scale = Vector2(0.3724138, 0.4554456)
+texture = ExtResource("4_xnrdl")
+
+[node name="Trash3" type="Sprite2D" parent="Trash4/Trash5/Trash2/Trash1" unique_id=1674625937]
+position = Vector2(-369.48148, 30.608704)
+scale = Vector2(1.3518518, 1.4782609)
+texture = ExtResource("4_xnrdl")
+
+[node name="Trash6" type="Sprite2D" parent="Trash4/Trash5/Trash2/Trash1/Trash3" unique_id=631054047]
+position = Vector2(119.0137, 24.705872)
+scale = Vector2(0.6849315, 0.6102941)
+texture = ExtResource("5_vdgt8")
+
+[node name="Trash7" type="Sprite2D" parent="Trash4/Trash5/Trash2/Trash1/Trash3/Trash6" unique_id=249388754]
+position = Vector2(-296.32, -84.433716)
+scale = Vector2(0.64, 0.7710843)
+texture = ExtResource("5_vdgt8")
+
+[node name="Fish3" type="Sprite2D" parent="." unique_id=1865787245]
+visible = false
+position = Vector2(1415, 388.5)
+scale = Vector2(0.546875, 0.44921875)
+texture = ExtResource("6_ufsa1")
+
+[node name="Fish4" type="Sprite2D" parent="Fish3" unique_id=510708311]
+position = Vector2(-1970.2856, -483.06082)
+rotation = 0.02877433
+scale = Vector2(1.1215796, 1.5563804)
+skew = -0.009356141
+texture = ExtResource("6_ufsa1")
+flip_h = true
+
+[node name="Fish1" type="Sprite2D" parent="Fish3/Fish4" unique_id=286039412]
+position = Vector2(597.53156, 414.63342)
+rotation = -0.02073382
+scale = Vector2(1.6304681, 1.4302874)
+skew = -0.0062152147
+texture = ExtResource("7_kexbr")
+flip_h = true
+
+[node name="Fish2" type="Sprite2D" parent="Fish3/Fish4/Fish1" unique_id=1240198633]
+position = Vector2(605, 157)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_74j0o")
+
+[node name="Fish5" type="Sprite2D" parent="Fish3/Fish4/Fish1/Fish2" unique_id=3576426]
+position = Vector2(-50, -878)
+rotation = 0.110759996
+texture = ExtResource("8_74j0o")
+flip_h = true

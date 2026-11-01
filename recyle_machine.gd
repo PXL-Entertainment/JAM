@@ -2,13 +2,19 @@ extends Area2D
 
 @export var texture_idle: Texture2D
 @export var texture_active: Texture2D
-@export var accepted_item: String = ""
+@export var accepted_items: Array[String] = ["Çöp1", "Çöp2", "Çöp3", "Çöp4"]   # örn. ["Elma", "Armut", "Muz", "Kiraz"]
 @export var required_count: int = 4
+@export var unique_items: bool = true            # true: listedeki her isim sadece 1 kez atılabilir
 
+<<<<<<< HEAD
 @export var reward_item_scene: PackedScene          # spawn olacak item sahnesi
 @export var spawn_offset: Vector2 = Vector2(0, -40) # makineye gore cikis noktasi
+=======
+@export var reward_item_scene: PackedScene       # spawn olacak item sahnesi
+@export var spawn_offset: Vector2 = Vector2(0, -40)
+>>>>>>> d3f4633834f238c32dfcfc32901915aefc5ddb25
 
-var current_count := 0
+var given_items: Array[String] = []
 var completed := false
 
 var _machine_key: String = ""
@@ -28,25 +34,49 @@ func _ready() -> void:
 		completed = saved.get("completed", false)
 
 	if texture_idle:
+<<<<<<< HEAD
 		%RecyleMachineSprite.texture = texture_idle
 	if completed and texture_active:
 		%RecyleMachineSprite.texture = texture_active
+=======
+		$RecyleMachineSprite.texture = texture_idle
+>>>>>>> d3f4633834f238c32dfcfc32901915aefc5ddb25
 
 func can_accept(item: Node) -> bool:
 	if completed:
 		return false
-	return accepted_item == "" or item.item_name == accepted_item
+
+	var item_key: String = str(item.item_name).strip_edges().to_lower()
+
+	# Bu isim daha önce atıldıysa tekrar kabul etme
+	if unique_items and given_items.has(item_key):
+		return false
+
+	# Liste boşsa her item kabul
+	if accepted_items.is_empty():
+		return true
+
+	for n in accepted_items:
+		if n.strip_edges().to_lower() == item_key:
+			return true
+
+	print("Makine bu item'ı kabul etmedi: '", item.item_name, "'")   # teşhis için
+	return false
 
 func accept_item(item: Node) -> void:
+	given_items.append(str(item.item_name).strip_edges().to_lower())
 	item.queue_free()
-	current_count += 1
-	%RecyleMachineSprite.pickup()
+	_pulse()
 
-	if current_count >= required_count:
+	if given_items.size() >= required_count:
 		completed = true
 		if texture_active:
+<<<<<<< HEAD
 			%RecyleMachineSprite.texture = texture_active
 		GameState.save_machine_state(_machine_key, current_count, completed)
+=======
+			$RecyleMachineSprite.texture = texture_active
+>>>>>>> d3f4633834f238c32dfcfc32901915aefc5ddb25
 		_spawn_reward()
 	else:
 		GameState.save_machine_state(_machine_key, current_count, completed)
@@ -59,7 +89,16 @@ func _spawn_reward() -> void:
 	var new_item := reward_item_scene.instantiate()
 	get_parent().add_child(new_item)
 	new_item.global_position = global_position + spawn_offset
+<<<<<<< HEAD
 
 	# Item RigidBody2D oldugu icin hafifce yukari firlatabiliriz
+=======
+	GameState2.trash_cleaned = true
+>>>>>>> d3f4633834f238c32dfcfc32901915aefc5ddb25
 	if new_item is RigidBody2D:
 		new_item.linear_velocity = Vector2(0, -150)
+
+func _pulse() -> void:
+	var tween := create_tween()
+	tween.tween_property($RecyleMachineSprite, "scale", Vector2(1.15, 1.15), 0.08)
+	tween.tween_property($RecyleMachineSprite, "scale", Vector2.ONE, 0.08)

@@ -41,5 +41,6 @@ func _process(_delta: float) -> void:
 	# Şişe MouthPoint'ten çıktıysa oyuncu almıştır
 	if not is_instance_valid(bottle) or bottle.get_parent() != mouth_point:
 		bottle_taken = true
+		GameState2.fish_revealed = true
 		if texture_without_bottle:
 			%TurtleSprite.texture = texture_without_bottle
