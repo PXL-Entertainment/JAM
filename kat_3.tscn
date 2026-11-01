@@ -8,7 +8,16 @@
 [ext_resource type="Script" uid="uid://dk5t4131fkjfs" path="res://Level/elevator.gd" id="5_fcwr2"]
 [ext_resource type="Script" uid="uid://qof1vwclrvh6" path="res://item.gd" id="5_j3fqx"]
 [ext_resource type="Texture2D" uid="uid://78jrcox4ev41" path="res://Sprites/Clorine_Bottle.png" id="6_mtk2s"]
+<<<<<<< HEAD
 [ext_resource type="Texture2D" uid="uid://bsx5inxait2ah" path="res://Sprites/Cobweb.png" id="7_fkmq1"]
+=======
+[ext_resource type="Texture2D" uid="uid://d2vkjww6g1300" path="res://Sprites/Background/Floor3/net1.png" id="7_r4lea"]
+[ext_resource type="Texture2D" uid="uid://bgkv1hxccnhi0" path="res://Sprites/Background/Floor3/net2.png" id="8_6qk03"]
+[ext_resource type="Texture2D" uid="uid://lvhyxi1nqwld" path="res://Sprites/Background/Floor3/net3.png" id="9_ya3bk"]
+[ext_resource type="Texture2D" uid="uid://b8n5s8uohygxq" path="res://Sprites/Background/Floor3/net4.png" id="10_703m3"]
+[ext_resource type="Texture2D" uid="uid://dnd6yfi3a4534" path="res://Sprites/Background/Floor3/net5.png" id="11_lkghk"]
+[ext_resource type="Texture2D" uid="uid://b87q212ejhmn5" path="res://Sprites/E_Keycap.png" id="14_2a23t"]
+>>>>>>> 3a5143227c3bdd62fbed8b3077a9e6d96ab5f660
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pvcbx"]
 size = Vector2(1728, 20)
@@ -128,6 +137,7 @@ collision_layer = 4
 position = Vector2(-960, -540)
 collision_mask = 4
 script = ExtResource("5_fcwr2")
+e_icon_texture = ExtResource("14_2a23t")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Elevator" unique_id=2070319429]
 position = Vector2(1112, 1405)

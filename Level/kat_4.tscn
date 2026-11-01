@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dvhcaqb8l2hsy" path="res://Sprites/Background/Room_1.png" id="1_7l3kr"]
 [ext_resource type="Script" uid="uid://dk5t4131fkjfs" path="res://Level/elevator.gd" id="2_f2x2t"]
 [ext_resource type="PackedScene" uid="uid://colkvh7or1ok0" path="res://player1.tscn" id="3_1j4ha"]
+[ext_resource type="Texture2D" uid="uid://b87q212ejhmn5" path="res://Sprites/E_Keycap.png" id="3_7nx8g"]
 [ext_resource type="Texture2D" uid="uid://d2jed0qr05rxl" path="res://Sprites/Aquarium.png" id="3_pd6yx"]
 [ext_resource type="PackedScene" uid="uid://dvrb2ro67pwyp" path="res://item.tscn" id="5_7nx8g"]
 [ext_resource type="Texture2D" uid="uid://jetdxe8vfttl" path="res://Sprites/Micro_Filter.png" id="6_yj4m8"]
@@ -42,6 +43,7 @@ shape = SubResource("WorldBoundaryShape2D_brl05")
 position = Vector2(-960, -540)
 collision_mask = 4
 script = ExtResource("2_f2x2t")
+e_icon_texture = ExtResource("3_7nx8g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Room1/Elevator" unique_id=1603423091]
 position = Vector2(149, 870)

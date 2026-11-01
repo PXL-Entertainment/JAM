@@ -50,8 +50,8 @@ func interact() -> void:
 	if remaining.is_empty():
 		_set_bottle_pickable(true)
 
-func _set_bottle_pickable(value: bool) -> void:
-	bottle.get_node("CollisionShape2D").set_deferred("disabled", not value)
+efunc _set_bottle_pickable(value: bool) -> void:
+e	bottle.get_node("CollisionShape2D").set_deferred("disabled", not value)
 
 func _process(_delta: float) -> void:
 	if bottle_taken:
