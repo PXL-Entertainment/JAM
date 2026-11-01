@@ -13,9 +13,8 @@ var _parked_items: Dictionary = {}
 
 var _last_scene_path: String = ""
 
-# key -> {"current_count": int, "completed": bool}
+# key -> {"current_count": int, "completed": bool, "given_items": Array}
 var _machine_states: Dictionary = {}
-
 
 func _process(_delta: float) -> void:
 	var scene := get_tree().current_scene
@@ -88,10 +87,13 @@ func _is_under_hold_point(node: Node) -> bool:
 		p = p.get_parent()
 	return false
 
-
 func get_machine_state(key: String):
 	return _machine_states.get(key, null)
 
 
-func save_machine_state(key: String, current_count: int, completed: bool) -> void:
-	_machine_states[key] = {"current_count": current_count, "completed": completed}
+func save_machine_state(key: String, current_count: int, completed: bool, given_items: Array = []) -> void:
+	_machine_states[key] = {
+		"current_count": current_count,
+		"completed": completed,
+		"given_items": given_items.duplicate(),
+	}
