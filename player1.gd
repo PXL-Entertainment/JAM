@@ -8,6 +8,28 @@ var held_item: Node2D = null
 var SPEED = 500
 #const JUMP_POWER = -1000
 
+func _ready() -> void:
+	# Onceki sahneden elimde bir esya tasiniyorsa, onu burada tekrar ele al.
+	if GameState.held_item_copy != null:
+		held_item = GameState.held_item_copy
+		GameState.held_item_copy = null
+		hold_point.add_child(held_item)
+		held_item.position = Vector2.ZERO
+		held_item.rotation = 0
+		_set_item_held(held_item, true)
+
+func _exit_tree() -> void:
+	# Sahne degismeden hemen once, elimdeki esyanin bir kopyasini
+	# GameState'e birakiyorum ki yeni sahnede tekrar elime gelsin.
+	if held_item != null and is_instance_valid(held_item):
+		var copy := held_item.duplicate()
+		if held_item.has_meta("item_key"):
+			copy.set_meta("item_key", held_item.get_meta("item_key"))
+		copy.set_meta("carried_instance", true)
+		GameState.held_item_copy = copy
+	else:
+		GameState.held_item_copy = null
+
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -52,7 +74,7 @@ func pick_up_nearest() -> void:
 	var nearest: Node2D = null
 	var nearest_dist := INF
 
-	# Hem Area2D hem RigidBody2D item'ları tara
+	# Hem Area2D hem RigidBody2D item'lari tara
 	var candidates: Array = []
 	candidates.append_array(pickup_area.get_overlapping_areas())
 	candidates.append_array(pickup_area.get_overlapping_bodies())

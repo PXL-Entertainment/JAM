@@ -1,9 +1,7 @@
 extends CanvasLayer
 ## Bagimsiz, tek kullanimlik karartma/sahne-gecis yardimcisi.
 ## AUTOLOAD DEGILDIR. Her tetiklemede yeni bir ornek olusturulup
-## dogrudan get_tree().root altina eklenir; boylece onu cagiran node
-## (Button/Area2D) sahne degisiminde silinse bile bu node ayakta kalir,
-## gecisi sorunsuz tamamlar ve en sonda kendini siler.
+## dogrudan get_tree().root altina eklenir.
 
 var _rect: ColorRect
 
@@ -27,6 +25,12 @@ func go_to(target_scene_path: String, fade_duration: float = 0.5) -> void:
 		push_error("Sahne bulunamadi: %s" % target_scene_path)
 		queue_free()
 		return
+
+	# Bu odada serbest duran (elde olmayan) esyalari, sahne kapanmadan once
+	# guvenle "park et" ki yok olmasinlar; bu odaya geri donulunce otomatik
+	# olarak eski yerlerinde cikacaklar.
+	if tree.current_scene:
+		GameState.park_loose_items(tree.current_scene)
 
 	var err := tree.change_scene_to_file(target_scene_path)
 	if err != OK:
