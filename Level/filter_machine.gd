@@ -45,6 +45,8 @@ func accept_item(item: Node) -> void:
 
 	if given_items.size() >= required_count:
 		completed = true
+		GameState2.ocean_color_changed = true
+		GameState2.ocean_color = Color("00a0ff")
 		if texture_active:
 			$Sprite2D.texture = texture_active
 		_spawn_reward()

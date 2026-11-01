@@ -57,7 +57,7 @@ func _spawn_reward() -> void:
 	var new_item := reward_item_scene.instantiate()
 	get_parent().add_child(new_item)
 	new_item.global_position = global_position + spawn_offset
-
+	GameState2.trash_cleaned = true
 	if new_item is RigidBody2D:
 		new_item.linear_velocity = Vector2(0, -150)
 
