@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cwppdhrdw4rke" path="res://Sprites/Characters/Character_Idle_Sheet.png" id="2_hqtel"]
 [ext_resource type="Texture2D" uid="uid://yjalrpt165n6" path="res://Sprites/Characters/Character_Running_Sheet.png" id="2_onrkg"]
 [ext_resource type="Script" uid="uid://bchyh6gipysul" path="res://ilke.gd" id="3_i3pqv"]
+[ext_resource type="AudioStream" uid="uid://btkpgqk1wf6ua" path="res://Sounds/Running Step.mp3" id="5_3odsw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_woueq"]
 atlas = ExtResource("2_hqtel")
@@ -83,3 +84,6 @@ collision_mask = 12
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PickupArea" unique_id=1479690356]
 position = Vector2(6, 0)
 shape = SubResource("RectangleShape2D_6w1u4")
+
+[node name="FootstepSound" type="AudioStreamPlayer2D" parent="." unique_id=2850531]
+stream = ExtResource("5_3odsw")

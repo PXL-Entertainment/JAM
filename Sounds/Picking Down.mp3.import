@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dmp81muoey0iy"
+path="res://.godot/imported/Picking Down.mp3-ef1e9096755df3602ac5e6b072d58107.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Picking Down.mp3"
+dest_files=["res://.godot/imported/Picking Down.mp3-ef1e9096755df3602ac5e6b072d58107.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

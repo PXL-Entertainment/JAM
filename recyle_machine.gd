@@ -55,6 +55,7 @@ func can_accept(item: Node) -> bool:
 	return false
 
 func accept_item(item: Node) -> void:
+	$AcceptSound.play()
 	given_items.append(str(item.item_name).strip_edges().to_lower())
 	current_count = given_items.size()
 	item.queue_free()

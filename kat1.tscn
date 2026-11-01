@@ -2,14 +2,15 @@
 
 [ext_resource type="Texture2D" uid="uid://dvhcaqb8l2hsy" path="res://Sprites/Background/Room_1.png" id="1_vr36e"]
 [ext_resource type="Script" uid="uid://emaylop67111" path="res://recyle_machine.gd" id="2_qcaw7"]
-[ext_resource type="Texture2D" uid="uid://cuc5o2x0uemox" path="res://Sprites/Recycle_Machine.png" id="3_cl4cb"]
+[ext_resource type="Texture2D" uid="uid://cuc5o2x0uemox" path="res://Sprites/MissionItems/Recycle_Machine.png" id="3_cl4cb"]
 [ext_resource type="Texture2D" uid="uid://chxbn2am7fl6s" path="res://Sprites/Trashes/Trash_1.png" id="4_msnr3"]
-[ext_resource type="Texture2D" uid="uid://dwxxsttunhr8t" path="res://Sprites/Recycle_Machine_Full.png" id="4_qhpvn"]
+[ext_resource type="Texture2D" uid="uid://dwxxsttunhr8t" path="res://Sprites/MissionItems/Recycle_Machine_Full.png" id="4_qhpvn"]
 [ext_resource type="Texture2D" uid="uid://dogpqx46tbtvp" path="res://Sprites/Trashes/Trash_2.png" id="5_bc6mo"]
 [ext_resource type="PackedScene" uid="uid://m7l1bejddxo8" path="res://filtre.tscn" id="5_tk1ef"]
 [ext_resource type="Script" uid="uid://5h7x33bhex8t" path="res://recyle_machine_sprite.gd" id="6_hpi27"]
 [ext_resource type="Script" uid="uid://qof1vwclrvh6" path="res://item.gd" id="6_vr36e"]
 [ext_resource type="PackedScene" uid="uid://colkvh7or1ok0" path="res://player1.tscn" id="7_qcaw7"]
+[ext_resource type="AudioStream" uid="uid://pvn0rfx0m7rr" path="res://Sounds/Recycle Machine.wav" id="7_qhpvn"]
 [ext_resource type="Texture2D" uid="uid://blvh0g5dgckr8" path="res://Sprites/Trashes/Trash_3.png" id="7_rhf8i"]
 [ext_resource type="PackedScene" uid="uid://dvrb2ro67pwyp" path="res://item.tscn" id="8_cl4cb"]
 [ext_resource type="Script" uid="uid://42kiicfi7fii" path="res://item_4.gd" id="8_lr72d"]
@@ -120,6 +121,9 @@ shape = SubResource("RectangleShape2D_t6fs7")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="RecyleMachine" unique_id=235171994]
 unique_name_in_owner = true
 libraries/ = SubResource("AnimationLibrary_e3t03")
+
+[node name="AcceptSound" type="AudioStreamPlayer2D" parent="RecyleMachine" unique_id=1257403221]
+stream = ExtResource("7_qhpvn")
 
 [node name="Item" parent="." unique_id=1094159161 instance=ExtResource("8_cl4cb")]
 position = Vector2(480, 960)

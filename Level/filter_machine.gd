@@ -47,6 +47,7 @@ func can_accept(item: Node) -> bool:
 	return false
 
 func accept_item(item: Node) -> void:
+	$AcceptSound.play()
 	GameState2.filter_given_items.append(str(item.item_name).strip_edges().to_lower())
 	print("Verilen: ", GameState2.filter_given_items.size(), "/", required_count, " -> ", GameState2.filter_given_items)
 	item.queue_free()

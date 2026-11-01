@@ -2,7 +2,10 @@ extends CharacterBody2D
 
 @onready var pickup_area: Area2D = $PickupArea
 @onready var hold_point: Marker2D = $HoldPoint
+@onready var footstep_sound: AudioStreamPlayer2D = $FootstepSound
 
+var footstep_timer := 0.0
+const FOOTSTEP_INTERVAL := 0.35   # adımlar arası süre (saniye), hızına göre ayarla
 var held_item: Node2D = null
 
 var SPEED = 500
@@ -48,7 +51,15 @@ func _physics_process(delta: float) -> void:
 		%"İlke".play_running_animation()
 	else:
 		%"İlke".play_idle_animation()
-	
+		# Adım sesi: yerde ve hareket halindeyken
+	if is_on_floor() and abs(velocity.x) > 10:
+		footstep_timer -= delta
+		if footstep_timer <= 0.0:
+			footstep_sound.pitch_scale = randf_range(0.9, 1.1)   # sesin monoton olmaması için
+			footstep_sound.play()
+			footstep_timer = FOOTSTEP_INTERVAL
+	else:
+		footstep_timer = 0.0   # durunca sıfırla, yürümeye başlayınca hemen ilk adım çalsın
 	move_and_slide()
 
 

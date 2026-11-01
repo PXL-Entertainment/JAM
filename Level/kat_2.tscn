@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://f56ugkgs8u4w" path="res://Sprites/MissionItems/Filter_Machine.png" id="5_x15an"]
 [ext_resource type="Texture2D" uid="uid://me0lof2veqgj" path="res://Sprites/MissionItems/Filter_Machine_Full.png" id="6_nqbev"]
 [ext_resource type="Script" uid="uid://5h7x33bhex8t" path="res://recyle_machine_sprite.gd" id="8_0v5yh"]
+[ext_resource type="AudioStream" uid="uid://db1yafe1twcp3" path="res://Sounds/Filter Machine.mp3" id="8_x15an"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ifsx"]
 size = Vector2(95, 217.5)
@@ -110,6 +111,9 @@ shape = SubResource("RectangleShape2D_t6fs7")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="FilterMachine" unique_id=235171994]
 unique_name_in_owner = true
 libraries/ = SubResource("AnimationLibrary_e3t03")
+
+[node name="AcceptSound" type="AudioStreamPlayer2D" parent="FilterMachine" unique_id=597279681]
+stream = ExtResource("8_x15an")
 
 [node name="Player1" parent="." unique_id=388676567 instance=ExtResource("3_xavdf")]
 position = Vector2(160, 888)

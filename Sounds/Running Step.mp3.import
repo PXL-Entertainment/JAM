@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://btkpgqk1wf6ua"
+path="res://.godot/imported/Running Step.mp3-4d76b8f2b3db704a38f577870bc29975.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Running Step.mp3"
+dest_files=["res://.godot/imported/Running Step.mp3-4d76b8f2b3db704a38f577870bc29975.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
