@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8n5s8uohygxq"
-path="res://.godot/imported/net4.png-8878085dfd941cc896572f59b73680b8.ctex"
+uid="uid://78jrcox4ev41"
+path="res://.godot/imported/Clorine_Bottle.png-1fc3996d38fb23e658cef2bbbd9de44a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Background/Floor3/net4.png"
-dest_files=["res://.godot/imported/net4.png-8878085dfd941cc896572f59b73680b8.ctex"]
+source_file="res://Sprites/MissionItems/Clorine_Bottle.png"
+dest_files=["res://.godot/imported/Clorine_Bottle.png-1fc3996d38fb23e658cef2bbbd9de44a.ctex"]
 
 [params]
 

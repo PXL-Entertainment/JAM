@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cb1tgjjkguvan"
-path="res://.godot/imported/Micro_Machine.png-15f5b1b90fdf788387c5dd29a0c2ace4.ctex"
+uid="uid://cv16pyy5dvtno"
+path="res://.godot/imported/Filter_Machine_1.png-ad6ac0095d442ce133eef800afbc09c7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Micro_Machine.png"
-dest_files=["res://.godot/imported/Micro_Machine.png-15f5b1b90fdf788387c5dd29a0c2ace4.ctex"]
+source_file="res://Sprites/MissionItems/Filter_Machine_1.png"
+dest_files=["res://.godot/imported/Filter_Machine_1.png-ad6ac0095d442ce133eef800afbc09c7.ctex"]
 
 [params]
 

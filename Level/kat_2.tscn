@@ -65,6 +65,7 @@ texture = ExtResource("1_it3r1")
 
 [node name="Elevator" type="Area2D" parent="Room1" unique_id=1966146103]
 position = Vector2(-960, -540)
+collision_mask = 4
 script = ExtResource("2_qcqjp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Room1/Elevator" unique_id=240576336]
@@ -110,3 +111,4 @@ libraries/ = SubResource("AnimationLibrary_e3t03")
 
 [node name="Player1" parent="." unique_id=388676567 instance=ExtResource("3_xavdf")]
 position = Vector2(147, 934)
+collision_layer = 4

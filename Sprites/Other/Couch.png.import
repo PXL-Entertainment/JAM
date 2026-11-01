@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cenkfxtoctkb2"
-path="res://.godot/imported/Micro_Sack.png-2cc6cf593b7821bfa3b5cdf9554ea04a.ctex"
+uid="uid://d157ks64wvw1m"
+path="res://.godot/imported/Couch.png-75b5ffc38919cd0d36aff5d15a4b1cd6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Micro_Sack.png"
-dest_files=["res://.godot/imported/Micro_Sack.png-2cc6cf593b7821bfa3b5cdf9554ea04a.ctex"]
+source_file="res://Sprites/Other/Couch.png"
+dest_files=["res://.godot/imported/Couch.png-75b5ffc38919cd0d36aff5d15a4b1cd6.ctex"]
 
 [params]
 

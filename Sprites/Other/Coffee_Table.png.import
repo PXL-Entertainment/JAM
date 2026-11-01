@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bxndmweo42dwd"
-path="res://.godot/imported/Filter_Machine_Only_2.png-bb105bff4fe731220e9d37c676fe6665.ctex"
+uid="uid://btrfte1ou5qv3"
+path="res://.godot/imported/Coffee_Table.png-57db8a34c1aa498ac083464d4794c47a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Filter_Machine_Only_2.png"
-dest_files=["res://.godot/imported/Filter_Machine_Only_2.png-bb105bff4fe731220e9d37c676fe6665.ctex"]
+source_file="res://Sprites/Other/Coffee_Table.png"
+dest_files=["res://.godot/imported/Coffee_Table.png-57db8a34c1aa498ac083464d4794c47a.ctex"]
 
 [params]
 

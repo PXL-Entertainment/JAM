@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bouke03bh8m23"
-path="res://.godot/imported/Clock.png-2a144c7635ee0e1e121dd11e4c63771f.ctex"
+uid="uid://bs3w7jmn0g411"
+path="res://.godot/imported/Filter_Machine_2.png-71483a9a2ededf819220388334295b72.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Clock.png"
-dest_files=["res://.godot/imported/Clock.png-2a144c7635ee0e1e121dd11e4c63771f.ctex"]
+source_file="res://Sprites/MissionItems/Filter_Machine_2.png"
+dest_files=["res://.godot/imported/Filter_Machine_2.png-71483a9a2ededf819220388334295b72.ctex"]
 
 [params]
 

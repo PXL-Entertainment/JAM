@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d2vkjww6g1300"
-path="res://.godot/imported/net1.png-f306ea9073772abab93a4279a7dfea2b.ctex"
+uid="uid://dwxxsttunhr8t"
+path="res://.godot/imported/Recycle_Machine_Full.png-aec10033f991be4efe9f014a319e5df7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Background/Floor3/net1.png"
-dest_files=["res://.godot/imported/net1.png-f306ea9073772abab93a4279a7dfea2b.ctex"]
+source_file="res://Sprites/MissionItems/Recycle_Machine_Full.png"
+dest_files=["res://.godot/imported/Recycle_Machine_Full.png-aec10033f991be4efe9f014a319e5df7.ctex"]
 
 [params]
 

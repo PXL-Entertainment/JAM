@@ -44,11 +44,11 @@ func accept_item(item: Node) -> void:
 	_pulse()
 
 	if given_items.size() >= required_count:
+		GameState2.ocean_color_changed = true
+		GameState2.ocean_color = Color("00a0ff")
 		completed = true
 		if texture_active:
 			%Sprite2D.texture = texture_active
-		GameState2.ocean_color_changed = true
-		GameState2.ocean_color = Color("00a0ff")
 		_spawn_reward()
 
 func _spawn_reward() -> void:

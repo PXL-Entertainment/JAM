@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://78jrcox4ev41"
-path="res://.godot/imported/Clorine_Bottle.png-e15a53af85aaca73c8a0bdf95dc13418.ctex"
+uid="uid://dd5jjhfcfgok"
+path="res://.godot/imported/Heart_Animation_Sheet.png-4de6d84810e7d34086fae948b2ae7771.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Clorine_Bottle.png"
-dest_files=["res://.godot/imported/Clorine_Bottle.png-e15a53af85aaca73c8a0bdf95dc13418.ctex"]
+source_file="res://Sprites/Other/Heart_Animation_Sheet.png"
+dest_files=["res://.godot/imported/Heart_Animation_Sheet.png-4de6d84810e7d34086fae948b2ae7771.ctex"]
 
 [params]
 

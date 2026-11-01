@@ -17,7 +17,7 @@ length = 28.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Credits/ColorRect:color")
+tracks/0/path = NodePath("CanvasLayer/ColorRect:color")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -29,7 +29,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Credits/ColorRect/Label:text")
+tracks/1/path = NodePath("CanvasLayer/ColorRect/Label:text")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -41,7 +41,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Credits/ColorRect/Label:theme_override_colors/font_color")
+tracks/2/path = NodePath("CanvasLayer/ColorRect/Label:theme_override_colors/font_color")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -56,7 +56,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Credits/ColorRect:color")
+tracks/0/path = NodePath("CanvasLayer/ColorRect:color")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -68,7 +68,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Credits/ColorRect/Label:text")
+tracks/1/path = NodePath("CanvasLayer/ColorRect/Label:text")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -80,7 +80,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Credits/ColorRect/Label:theme_override_colors/font_color")
+tracks/2/path = NodePath("CanvasLayer/ColorRect/Label:theme_override_colors/font_color")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -176,9 +176,9 @@ rotation = 0.110759996
 texture = ExtResource("8_74j0o")
 flip_h = true
 
-[node name="Credits" type="CanvasLayer" parent="." unique_id=933846517]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=933846517]
 
-[node name="ColorRect" type="ColorRect" parent="Credits" unique_id=1754140863]
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1754140863]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -186,7 +186,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0)
 
-[node name="Label" type="Label" parent="Credits/ColorRect" unique_id=52627089]
+[node name="Label" type="Label" parent="CanvasLayer/ColorRect" unique_id=52627089]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5

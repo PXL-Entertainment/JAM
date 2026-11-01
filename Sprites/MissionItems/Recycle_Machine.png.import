@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dnd6yfi3a4534"
-path="res://.godot/imported/net5.png-00f699b8f99ab07c4ca1b5b2590e7893.ctex"
+uid="uid://cuc5o2x0uemox"
+path="res://.godot/imported/Recycle_Machine.png-c58136928fce5c0891d48b8d3a13ff3a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Background/Floor3/net5.png"
-dest_files=["res://.godot/imported/net5.png-00f699b8f99ab07c4ca1b5b2590e7893.ctex"]
+source_file="res://Sprites/MissionItems/Recycle_Machine.png"
+dest_files=["res://.godot/imported/Recycle_Machine.png-c58136928fce5c0891d48b8d3a13ff3a.ctex"]
 
 [params]
 

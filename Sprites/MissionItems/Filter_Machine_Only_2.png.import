@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d2jed0qr05rxl"
-path="res://.godot/imported/Aquarium.png-32965957cf333706f23407c4188c9d0e.ctex"
+uid="uid://bxndmweo42dwd"
+path="res://.godot/imported/Filter_Machine_Only_2.png-e3e6d59c6bac68b0d97639bb2f530551.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Aquarium.png"
-dest_files=["res://.godot/imported/Aquarium.png-32965957cf333706f23407c4188c9d0e.ctex"]
+source_file="res://Sprites/MissionItems/Filter_Machine_Only_2.png"
+dest_files=["res://.godot/imported/Filter_Machine_Only_2.png-e3e6d59c6bac68b0d97639bb2f530551.ctex"]
 
 [params]
 
