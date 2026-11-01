@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dvhcaqb8l2hsy" path="res://Sprites/Background/Room_1.png" id="1_it3r1"]
 [ext_resource type="Script" uid="uid://dk5t4131fkjfs" path="res://Level/elevator.gd" id="2_qcqjp"]
+[ext_resource type="Texture2D" uid="uid://b87q212ejhmn5" path="res://Sprites/E_Keycap.png" id="3_egose"]
 [ext_resource type="PackedScene" uid="uid://colkvh7or1ok0" path="res://player1.tscn" id="3_xavdf"]
 [ext_resource type="Script" uid="uid://b8e2mgv0goqyb" path="res://Level/filter_machine.gd" id="4_8sint"]
 [ext_resource type="Texture2D" uid="uid://f56ugkgs8u4w" path="res://Sprites/MissionItems/Filter_Machine.png" id="5_x15an"]
@@ -67,6 +68,7 @@ texture = ExtResource("1_it3r1")
 position = Vector2(-960, -540)
 collision_mask = 4
 script = ExtResource("2_qcqjp")
+e_icon_texture = ExtResource("3_egose")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Room1/Elevator" unique_id=240576336]
 position = Vector2(149, 870)
