@@ -9,12 +9,14 @@ const ELEVATOR_SCENE := "res://Level/elevator.tscn" # kendi yolunu yaz
 var credits_started := false
 
 func _ready():
-	print("ocean: ", GameState2.filter_machine_completed,
-		" | trash: ", GameState2.trash_cleaned,
-		" | fish: ", GameState2.fish_revealed)
 	apply_state()
-func _process(delta: float) -> void:
+	%AnimationPlayer.animation_finished.connect(_on_animation_finished)
 	check_credits()
+
+func _on_animation_finished(anim_name: StringName) -> void:
+	if anim_name == "Credits":
+		await get_tree().create_timer(2.0).timeout
+		get_tree().quit()
 
 func apply_state():
 	if GameState2.ocean_color_changed:
@@ -47,3 +49,6 @@ func _unhandled_input(event):
 	if event.is_action_pressed("interaction") and GameState2.elevator_return_enabled:
 		GameState2.last_floor = "kat_5"
 		get_tree().change_scene_to_file(ELEVATOR_SCENE)
+
+func quit_game() -> void:
+	get_tree().quit()
