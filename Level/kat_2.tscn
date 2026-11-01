@@ -4,8 +4,8 @@
 [ext_resource type="Script" uid="uid://dk5t4131fkjfs" path="res://Level/elevator.gd" id="2_qcqjp"]
 [ext_resource type="PackedScene" uid="uid://colkvh7or1ok0" path="res://player1.tscn" id="3_xavdf"]
 [ext_resource type="Script" uid="uid://b8e2mgv0goqyb" path="res://Level/filter_machine.gd" id="4_8sint"]
-[ext_resource type="Texture2D" uid="uid://f56ugkgs8u4w" path="res://Sprites/Filter_Machine.png" id="5_x15an"]
-[ext_resource type="Texture2D" uid="uid://me0lof2veqgj" path="res://Sprites/Filter_Machine_Full.png" id="6_nqbev"]
+[ext_resource type="Texture2D" uid="uid://f56ugkgs8u4w" path="res://Sprites/MissionItems/Filter_Machine.png" id="5_x15an"]
+[ext_resource type="Texture2D" uid="uid://me0lof2veqgj" path="res://Sprites/MissionItems/Filter_Machine_Full.png" id="6_nqbev"]
 [ext_resource type="Script" uid="uid://5h7x33bhex8t" path="res://recyle_machine_sprite.gd" id="8_0v5yh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ifsx"]

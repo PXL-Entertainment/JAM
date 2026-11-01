@@ -24,7 +24,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Color(0, 0, 0, 0), Color(0.05109611, 0.05109611, 0.051096074, 1)]
+"values": [Color(0, 0, 0, 0), Color(0.050980393, 0.050980393, 0.050980393, 1)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false

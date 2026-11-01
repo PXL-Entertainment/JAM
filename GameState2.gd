@@ -5,6 +5,8 @@ var trash_cleaned := false
 var fish_revealed := false
 var turtle_blockers_cleared: int = 0
 var turtle_bottle_taken: bool = false
+var filter_given_items: Array[String] = []
+var filter_machine_completed: bool = false
 
 var ocean_color := Color(0x00a0ffff)
 
