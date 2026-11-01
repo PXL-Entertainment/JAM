@@ -28,20 +28,16 @@ func _ready() -> void:
 		current_scene_path = get_tree().current_scene.scene_file_path
 
 	var loc = GameState.get_item_location(_item_key)
-	if loc == null:
-		# Ilk defa goruluyor -> burasi onun varsayilan (ev) konumu.
-		GameState.set_item_location(_item_key, current_scene_path, position)
-		return
-
-	if loc.get("held", false):
+	
+	# EĞER EŞYA DAHA ÖNCE YÜKLENMİŞSE (GameState'te kaydı varsa):
+	# Bu kata ikinci kez gelindiğinde tekrar spawn olmaması için kendini hemen siler.
+	if loc != null:
 		queue_free()
 		return
 
-	if loc.get("scene_path", "") != current_scene_path:
-		queue_free()
-		return
-
-	position = loc.get("position", position)
+	# EŞYA İLK DEFA GÖRÜLÜYORSA:
+	# GameState'e kaydedilir ve sahnedeki yerinde kalır.
+	GameState.set_item_location(_item_key, current_scene_path, position)
 
 
 func _apply_texture() -> void:
