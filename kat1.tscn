@@ -1,17 +1,13 @@
 [gd_scene format=3 uid="uid://c8gxggv005gfg"]
 
 [ext_resource type="Texture2D" uid="uid://dvhcaqb8l2hsy" path="res://Sprites/Background/Room_1.png" id="1_vr36e"]
-<<<<<<< HEAD
-[ext_resource type="PackedScene" uid="uid://cr2idlqj4lpyf" path="res://recyle_machine.tscn" id="2_lr72d"]
-[ext_resource type="Texture2D" uid="uid://chxbn2am7fl6s" path="res://Sprites/Trashes/Trash_1.png" id="4_msnr3"]
-[ext_resource type="Texture2D" uid="uid://dogpqx46tbtvp" path="res://Sprites/Trashes/Trash_2.png" id="5_bc6mo"]
-=======
-[ext_resource type="Script" uid="uid://ce4tahae6dvai" path="res://recyle_machine.gd" id="2_qcaw7"]
+[ext_resource type="Script" uid="uid://emaylop67111" path="res://recyle_machine.gd" id="2_qcaw7"]
 [ext_resource type="Texture2D" uid="uid://cuc5o2x0uemox" path="res://Sprites/Recycle_Machine.png" id="3_cl4cb"]
+[ext_resource type="Texture2D" uid="uid://chxbn2am7fl6s" path="res://Sprites/Trashes/Trash_1.png" id="4_msnr3"]
 [ext_resource type="Texture2D" uid="uid://dwxxsttunhr8t" path="res://Sprites/Recycle_Machine_Full.png" id="4_qhpvn"]
+[ext_resource type="Texture2D" uid="uid://dogpqx46tbtvp" path="res://Sprites/Trashes/Trash_2.png" id="5_bc6mo"]
 [ext_resource type="PackedScene" uid="uid://m7l1bejddxo8" path="res://filtre.tscn" id="5_tk1ef"]
 [ext_resource type="Script" uid="uid://5h7x33bhex8t" path="res://recyle_machine_sprite.gd" id="6_hpi27"]
->>>>>>> d3f4633834f238c32dfcfc32901915aefc5ddb25
 [ext_resource type="Script" uid="uid://qof1vwclrvh6" path="res://item.gd" id="6_vr36e"]
 [ext_resource type="PackedScene" uid="uid://colkvh7or1ok0" path="res://player1.tscn" id="7_qcaw7"]
 [ext_resource type="Texture2D" uid="uid://blvh0g5dgckr8" path="res://Sprites/Trashes/Trash_3.png" id="7_rhf8i"]
@@ -164,6 +160,7 @@ position = Vector2(152, 928)
 collision_layer = 12
 
 [node name="Elevator" type="Area2D" parent="." unique_id=665480470]
+collision_mask = 12
 script = ExtResource("11_msnr3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Elevator" unique_id=1051084623]

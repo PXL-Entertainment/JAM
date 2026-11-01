@@ -15,7 +15,7 @@ var completed := false
 func _ready() -> void:
 	add_to_group("machines")
 	if texture_idle:
-		$Sprite2D.texture = texture_idle
+		%Sprite2D.texture = texture_idle
 
 func can_accept(item: Node) -> bool:
 	if completed:
@@ -48,7 +48,7 @@ func accept_item(item: Node) -> void:
 		GameState2.ocean_color_changed = true
 		GameState2.ocean_color = Color("00a0ff")
 		if texture_active:
-			$Sprite2D.texture = texture_active
+			%Sprite2D.texture = texture_active
 		_spawn_reward()
 
 func _spawn_reward() -> void:

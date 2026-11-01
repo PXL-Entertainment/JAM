@@ -19,9 +19,6 @@ config/windows_native_icon="res://Sprites/Icons/Game Icon.ico"
 [autoload]
 
 GameState2="*uid://clffietusmpl3"
-
-[autoload]
-
 GameState="*uid://c778nila1eus"
 
 [display]
